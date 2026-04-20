@@ -1,0 +1,3236 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_3_and_
+> 4_Stata_Results.txt
+  log type:  text
+ opened on:  19 Apr 2026, 20:30:05
+
+. do "/var/folders/42/0shmvk2961vc3kyvy9tp02qw0000gn/T//SD86124.000000"
+
+. clear *
+
+. insheet using "Study_4_data.csv", clear
+(239 vars, 1,328 obs)
+
+. gen study=4
+
+. destring *, replace
+ResponseID contains nonnumeric characters; no replace
+responseset contains nonnumeric characters; no replace
+name contains nonnumeric characters; no replace
+externaldatareference has all characters numeric; replaced as byte
+(1328 missing values generated)
+email has all characters numeric; replaced as byte
+(1328 missing values generated)
+status already numeric; no replace
+startdate contains nonnumeric characters; no replace
+enddate contains nonnumeric characters; no replace
+finished already numeric; no replace
+confirmcode already numeric; no replace
+condition has all characters numeric; replaced as byte
+(12 missing values generated)
+counterbalance has all characters numeric; replaced as byte
+(12 missing values generated)
+accimp_order has all characters numeric; replaced as byte
+(12 missing values generated)
+idinst already numeric; no replace
+fb has all characters numeric; replaced as byte
+(4 missing values generated)
+term has all characters numeric; replaced as byte
+(1326 missing values generated)
+inst_sm has all characters numeric; replaced as byte
+(48 missing values generated)
+fake1_sm has all characters numeric; replaced as byte
+(63 missing values generated)
+fake1_3 has all characters numeric; replaced as byte
+(66 missing values generated)
+fake1_rt_1 has all characters numeric; replaced as double
+(63 missing values generated)
+fake1_rt_2 has all characters numeric; replaced as double
+(63 missing values generated)
+fake1_rt_3 has all characters numeric; replaced as double
+(63 missing values generated)
+fake1_rt_4 has all characters numeric; replaced as byte
+(63 missing values generated)
+fake2_sm has all characters numeric; replaced as byte
+(61 missing values generated)
+fake2_3 has all characters numeric; replaced as byte
+(62 missing values generated)
+fake2_rt_1 has all characters numeric; replaced as double
+(61 missing values generated)
+fake2_rt_2 has all characters numeric; replaced as double
+(61 missing values generated)
+fake2_rt_3 has all characters numeric; replaced as double
+(61 missing values generated)
+fake2_rt_4 has all characters numeric; replaced as byte
+(61 missing values generated)
+fake3_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+fake3_3 has all characters numeric; replaced as byte
+(67 missing values generated)
+fake3_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+fake3_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+fake3_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+fake3_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+fake4_sm has all characters numeric; replaced as byte
+(64 missing values generated)
+fake4_3 has all characters numeric; replaced as byte
+(68 missing values generated)
+fake4_rt_1 has all characters numeric; replaced as double
+(64 missing values generated)
+fake4_rt_2 has all characters numeric; replaced as double
+(64 missing values generated)
+fake4_rt_3 has all characters numeric; replaced as double
+(64 missing values generated)
+fake4_rt_4 has all characters numeric; replaced as byte
+(64 missing values generated)
+fake5_sm has all characters numeric; replaced as byte
+(63 missing values generated)
+fake5_3 has all characters numeric; replaced as byte
+(67 missing values generated)
+fake5_rt_1 has all characters numeric; replaced as double
+(63 missing values generated)
+fake5_rt_2 has all characters numeric; replaced as double
+(63 missing values generated)
+fake5_rt_3 has all characters numeric; replaced as double
+(63 missing values generated)
+fake5_rt_4 has all characters numeric; replaced as byte
+(63 missing values generated)
+fake6_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+fake6_3 has all characters numeric; replaced as byte
+(69 missing values generated)
+fake6_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+fake6_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+fake6_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+fake6_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+fake7_sm has all characters numeric; replaced as byte
+(67 missing values generated)
+fake7_3 has all characters numeric; replaced as byte
+(69 missing values generated)
+fake7_rt_1 has all characters numeric; replaced as double
+(67 missing values generated)
+fake7_rt_2 has all characters numeric; replaced as double
+(67 missing values generated)
+fake7_rt_3 has all characters numeric; replaced as double
+(67 missing values generated)
+fake7_rt_4 has all characters numeric; replaced as byte
+(67 missing values generated)
+fake8_sm has all characters numeric; replaced as byte
+(64 missing values generated)
+fake8_3 has all characters numeric; replaced as byte
+(67 missing values generated)
+fake8_rt_1 has all characters numeric; replaced as double
+(64 missing values generated)
+fake8_rt_2 has all characters numeric; replaced as double
+(64 missing values generated)
+fake8_rt_3 has all characters numeric; replaced as double
+(64 missing values generated)
+fake8_rt_4 has all characters numeric; replaced as byte
+(64 missing values generated)
+fake9_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+fake9_3 has all characters numeric; replaced as byte
+(67 missing values generated)
+fake9_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+fake9_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+fake9_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+fake9_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+fake10_sm has all characters numeric; replaced as byte
+(66 missing values generated)
+fake10_3 has all characters numeric; replaced as byte
+(70 missing values generated)
+fake10_rt_1 has all characters numeric; replaced as double
+(66 missing values generated)
+fake10_rt_2 has all characters numeric; replaced as double
+(66 missing values generated)
+fake10_rt_3 has all characters numeric; replaced as double
+(66 missing values generated)
+fake10_rt_4 has all characters numeric; replaced as byte
+(66 missing values generated)
+fake11_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+fake11_3 has all characters numeric; replaced as byte
+(70 missing values generated)
+fake11_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+fake11_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+fake11_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+fake11_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+fake12_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+fake12_3 has all characters numeric; replaced as byte
+(66 missing values generated)
+fake12_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+fake12_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+fake12_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+fake12_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+real1_sm has all characters numeric; replaced as byte
+(63 missing values generated)
+real1_3 has all characters numeric; replaced as byte
+(66 missing values generated)
+real_rt_1 has all characters numeric; replaced as double
+(63 missing values generated)
+real_rt_2 has all characters numeric; replaced as double
+(63 missing values generated)
+real_rt_3 has all characters numeric; replaced as double
+(63 missing values generated)
+real_rt_4 has all characters numeric; replaced as byte
+(63 missing values generated)
+real2_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+real2_3 has all characters numeric; replaced as byte
+(66 missing values generated)
+real2_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+real2_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+real2_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+real2_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+real3_sm has all characters numeric; replaced as byte
+(64 missing values generated)
+real3_3 has all characters numeric; replaced as byte
+(69 missing values generated)
+real3_rt_1 has all characters numeric; replaced as double
+(64 missing values generated)
+real3_rt_2 has all characters numeric; replaced as double
+(64 missing values generated)
+real3_rt_3 has all characters numeric; replaced as double
+(64 missing values generated)
+real3_rt_4 has all characters numeric; replaced as byte
+(64 missing values generated)
+real4_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+real4_3 has all characters numeric; replaced as byte
+(68 missing values generated)
+real4_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+real4_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+real4_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+real4_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+real5_sm has all characters numeric; replaced as byte
+(64 missing values generated)
+real5_3 has all characters numeric; replaced as byte
+(69 missing values generated)
+real5_rt_1 has all characters numeric; replaced as double
+(64 missing values generated)
+real5_rt_2 has all characters numeric; replaced as double
+(64 missing values generated)
+real5_rt_3 has all characters numeric; replaced as double
+(64 missing values generated)
+real5_rt_4 has all characters numeric; replaced as byte
+(64 missing values generated)
+real6_sm has all characters numeric; replaced as byte
+(63 missing values generated)
+real6_3 has all characters numeric; replaced as byte
+(67 missing values generated)
+real6_rt_1 has all characters numeric; replaced as double
+(63 missing values generated)
+real6_rt_2 has all characters numeric; replaced as double
+(63 missing values generated)
+real6_rt_3 has all characters numeric; replaced as double
+(63 missing values generated)
+real6_rt_4 has all characters numeric; replaced as byte
+(63 missing values generated)
+real7_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+real7_3 has all characters numeric; replaced as byte
+(69 missing values generated)
+real7_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+real7_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+real7_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+real7_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+real8_sm has all characters numeric; replaced as byte
+(62 missing values generated)
+real8_3 has all characters numeric; replaced as byte
+(63 missing values generated)
+real8_rt_1 has all characters numeric; replaced as double
+(62 missing values generated)
+real8_rt_2 has all characters numeric; replaced as double
+(62 missing values generated)
+real8_rt_3 has all characters numeric; replaced as double
+(62 missing values generated)
+real8_rt_4 has all characters numeric; replaced as byte
+(62 missing values generated)
+real9_sm has all characters numeric; replaced as byte
+(64 missing values generated)
+real9_3 has all characters numeric; replaced as byte
+(65 missing values generated)
+real9_rt_1 has all characters numeric; replaced as double
+(64 missing values generated)
+real9_rt_2 has all characters numeric; replaced as double
+(64 missing values generated)
+real9_rt_3 has all characters numeric; replaced as double
+(64 missing values generated)
+real9_rt_4 has all characters numeric; replaced as byte
+(64 missing values generated)
+real10_sm has all characters numeric; replaced as byte
+(65 missing values generated)
+real10_3 has all characters numeric; replaced as byte
+(67 missing values generated)
+real10_rt_1 has all characters numeric; replaced as double
+(65 missing values generated)
+real10_rt_2 has all characters numeric; replaced as double
+(65 missing values generated)
+real10_rt_3 has all characters numeric; replaced as double
+(65 missing values generated)
+real10_rt_4 has all characters numeric; replaced as byte
+(65 missing values generated)
+real11_sm has all characters numeric; replaced as byte
+(64 missing values generated)
+real11_3 has all characters numeric; replaced as byte
+(66 missing values generated)
+real11_rt_1 has all characters numeric; replaced as double
+(64 missing values generated)
+real11_rt_2 has all characters numeric; replaced as double
+(64 missing values generated)
+real11_rt_3 has all characters numeric; replaced as double
+(64 missing values generated)
+real11_rt_4 has all characters numeric; replaced as byte
+(64 missing values generated)
+real12_sm has all characters numeric; replaced as byte
+(64 missing values generated)
+real12_3 has all characters numeric; replaced as byte
+(67 missing values generated)
+real12_rt_1 has all characters numeric; replaced as double
+(64 missing values generated)
+real12_rt_2 has all characters numeric; replaced as double
+(64 missing values generated)
+real12_rt_3 has all characters numeric; replaced as double
+(64 missing values generated)
+real12_rt_4 has all characters numeric; replaced as byte
+(64 missing values generated)
+pretest2 has all characters numeric; replaced as byte
+(703 missing values generated)
+neufakeimp has all characters numeric; replaced as byte
+(696 missing values generated)
+neu1_2 has all characters numeric; replaced as byte
+(697 missing values generated)
+neu1_rt_1 has all characters numeric; replaced as double
+(696 missing values generated)
+neu1_rt_2 has all characters numeric; replaced as double
+(696 missing values generated)
+neu1_rt_3 has all characters numeric; replaced as double
+(696 missing values generated)
+neu1_rt_4 has all characters numeric; replaced as int
+(696 missing values generated)
+neurealimp has all characters numeric; replaced as byte
+(694 missing values generated)
+neu3_2 has all characters numeric; replaced as byte
+(695 missing values generated)
+neu3_rt_1 has all characters numeric; replaced as double
+(694 missing values generated)
+neu3_rt_2 has all characters numeric; replaced as double
+(694 missing values generated)
+neu3_rt_3 has all characters numeric; replaced as double
+(694 missing values generated)
+neu3_rt_4 has all characters numeric; replaced as byte
+(694 missing values generated)
+pretest1 has all characters numeric; replaced as byte
+(684 missing values generated)
+crt_inst has all characters numeric; replaced as byte
+(69 missing values generated)
+crt1_1 has all characters numeric; replaced as byte
+(70 missing values generated)
+crt1_1_rt_1 has all characters numeric; replaced as double
+(70 missing values generated)
+crt1_1_rt_2 has all characters numeric; replaced as double
+(70 missing values generated)
+crt1_1_rt_3 has all characters numeric; replaced as double
+(70 missing values generated)
+crt1_1_rt_4 has all characters numeric; replaced as byte
+(70 missing values generated)
+crt1_2 has all characters numeric; replaced as int
+(70 missing values generated)
+crt1_2_rt_1 has all characters numeric; replaced as double
+(70 missing values generated)
+crt1_2_rt_2 has all characters numeric; replaced as double
+(70 missing values generated)
+crt1_2_rt_3 has all characters numeric; replaced as double
+(70 missing values generated)
+crt1_2_rt_4 has all characters numeric; replaced as byte
+(70 missing values generated)
+crt1_3 has all characters numeric; replaced as int
+(71 missing values generated)
+crt1_3_rt_1 has all characters numeric; replaced as double
+(71 missing values generated)
+crt1_3_rt_2 has all characters numeric; replaced as double
+(71 missing values generated)
+crt1_3_rt_3 has all characters numeric; replaced as double
+(71 missing values generated)
+crt1_3_rt_4 has all characters numeric; replaced as byte
+(71 missing values generated)
+crt3_1 contains nonnumeric characters; no replace
+crt3_2 has all characters numeric; replaced as byte
+(72 missing values generated)
+crt3_3 contains nonnumeric characters; no replace
+crt3_4 contains nonnumeric characters; no replace
+crt_chk has all characters numeric; replaced as byte
+(73 missing values generated)
+age has all characters numeric; replaced as byte
+(77 missing values generated)
+sex has all characters numeric; replaced as byte
+(76 missing values generated)
+education has all characters numeric; replaced as byte
+(76 missing values generated)
+english has all characters numeric; replaced as byte
+(84 missing values generated)
+party has all characters numeric; replaced as byte
+(77 missing values generated)
+party_text contains nonnumeric characters; no replace
+social_conserv has all characters numeric; replaced as byte
+(88 missing values generated)
+economic_conserv has all characters numeric; replaced as byte
+(82 missing values generated)
+potus2016 has all characters numeric; replaced as byte
+(79 missing values generated)
+clintontrump has all characters numeric; replaced as byte
+(80 missing values generated)
+demrep has all characters numeric; replaced as byte
+(81 missing values generated)
+socialcircle_2 has all characters numeric; replaced as byte
+(98 missing values generated)
+media1 has all characters numeric; replaced as byte
+(83 missing values generated)
+media2 has all characters numeric; replaced as byte
+(82 missing values generated)
+media3_1 has all characters numeric; replaced as byte
+(79 missing values generated)
+media3_2 has all characters numeric; replaced as byte
+(80 missing values generated)
+media3_3 has all characters numeric; replaced as byte
+(79 missing values generated)
+media3_11 has all characters numeric; replaced as byte
+(79 missing values generated)
+fb_f has all characters numeric; replaced as byte
+(92 missing values generated)
+socialmedia_chk has all characters numeric; replaced as byte
+(80 missing values generated)
+accimp has all characters numeric; replaced as byte
+(89 missing values generated)
+accimp_friends has all characters numeric; replaced as byte
+(94 missing values generated)
+fne_inst has all characters numeric; replaced as byte
+(82 missing values generated)
+fne_1 has all characters numeric; replaced as byte
+(89 missing values generated)
+fne_2 has all characters numeric; replaced as byte
+(95 missing values generated)
+fne_3 has all characters numeric; replaced as byte
+(90 missing values generated)
+fne_4 has all characters numeric; replaced as byte
+(93 missing values generated)
+fne_5 has all characters numeric; replaced as byte
+(90 missing values generated)
+fne_6 has all characters numeric; replaced as byte
+(89 missing values generated)
+fne_7 has all characters numeric; replaced as byte
+(92 missing values generated)
+fne_8 has all characters numeric; replaced as byte
+(91 missing values generated)
+theism1 has all characters numeric; replaced as byte
+(83 missing values generated)
+theism2_1 has all characters numeric; replaced as byte
+(471 missing values generated)
+theism2_2 has all characters numeric; replaced as byte
+(1078 missing values generated)
+theism2_3 has all characters numeric; replaced as byte
+(922 missing values generated)
+theism2_4 has all characters numeric; replaced as byte
+(1099 missing values generated)
+note has all characters numeric; replaced as byte
+(83 missing values generated)
+random has all characters numeric; replaced as byte
+(83 missing values generated)
+google has all characters numeric; replaced as byte
+(86 missing values generated)
+fabricate has all characters numeric; replaced as byte
+(83 missing values generated)
+zipcode has all characters numeric; replaced as long
+(91 missing values generated)
+comments contains nonnumeric characters; no replace
+length contains nonnumeric characters; no replace
+study already numeric; no replace
+
+. save tmp, replace
+file tmp.dta saved
+
+. 
+. insheet using "Study_3_data.csv", clear
+(226 vars, 1,254 obs)
+
+. gen study=3
+
+. destring *, replace
+v1 contains nonnumeric characters; no replace
+v2 contains nonnumeric characters; no replace
+v3 contains nonnumeric characters; no replace
+v4 already numeric; no replace
+v5 already numeric; no replace
+v7 already numeric; no replace
+v8 contains nonnumeric characters; no replace
+v9 contains nonnumeric characters; no replace
+v10 already numeric; no replace
+confirmcode already numeric; no replace
+condition already numeric; no replace
+counterbalance already numeric; no replace
+idinst already numeric; no replace
+fb already numeric; no replace
+term already numeric; no replace
+inst_sm already numeric; no replace
+fake1_sm already numeric; no replace
+fake1_3 already numeric; no replace
+fake1_rt_1 already numeric; no replace
+fake1_rt_2 already numeric; no replace
+fake1_rt_3 already numeric; no replace
+fake1_rt_4 already numeric; no replace
+fake2_sm already numeric; no replace
+fake2_3 already numeric; no replace
+fake2_rt_1 already numeric; no replace
+fake2_rt_2 already numeric; no replace
+fake2_rt_3 already numeric; no replace
+fake2_rt_4 already numeric; no replace
+fake3_sm already numeric; no replace
+fake3_3 already numeric; no replace
+fake3_rt_1 already numeric; no replace
+fake3_rt_2 already numeric; no replace
+fake3_rt_3 already numeric; no replace
+fake3_rt_4 already numeric; no replace
+fake4_sm already numeric; no replace
+fake4_3 already numeric; no replace
+fake4_rt_1 already numeric; no replace
+fake4_rt_2 already numeric; no replace
+fake4_rt_3 already numeric; no replace
+fake4_rt_4 already numeric; no replace
+fake5_sm already numeric; no replace
+fake5_3 already numeric; no replace
+fake5_rt_1 already numeric; no replace
+fake5_rt_2 already numeric; no replace
+fake5_rt_3 already numeric; no replace
+fake5_rt_4 already numeric; no replace
+fake6_sm already numeric; no replace
+fake6_3 already numeric; no replace
+fake6_rt_1 already numeric; no replace
+fake6_rt_2 already numeric; no replace
+fake6_rt_3 already numeric; no replace
+fake6_rt_4 already numeric; no replace
+fake7_sm already numeric; no replace
+fake7_3 already numeric; no replace
+fake7_rt_1 already numeric; no replace
+fake7_rt_2 already numeric; no replace
+fake7_rt_3 already numeric; no replace
+fake7_rt_4 already numeric; no replace
+fake8_sm already numeric; no replace
+fake8_3 already numeric; no replace
+fake8_rt_1 already numeric; no replace
+fake8_rt_2 already numeric; no replace
+fake8_rt_3 already numeric; no replace
+fake8_rt_4 already numeric; no replace
+fake9_sm already numeric; no replace
+fake9_3 already numeric; no replace
+fake9_rt_1 already numeric; no replace
+fake9_rt_2 already numeric; no replace
+fake9_rt_3 already numeric; no replace
+fake9_rt_4 already numeric; no replace
+fake10_sm already numeric; no replace
+fake10_3 already numeric; no replace
+fake10_rt_1 already numeric; no replace
+fake10_rt_2 already numeric; no replace
+fake10_rt_3 already numeric; no replace
+fake10_rt_4 already numeric; no replace
+fake11_sm already numeric; no replace
+fake11_3 already numeric; no replace
+fake11_rt_1 already numeric; no replace
+fake11_rt_2 already numeric; no replace
+fake11_rt_3 already numeric; no replace
+fake11_rt_4 already numeric; no replace
+fake12_sm already numeric; no replace
+fake12_3 already numeric; no replace
+fake12_rt_1 already numeric; no replace
+fake12_rt_2 already numeric; no replace
+fake12_rt_3 already numeric; no replace
+fake12_rt_4 already numeric; no replace
+real1_sm already numeric; no replace
+real1_3 already numeric; no replace
+real_rt_1 already numeric; no replace
+real_rt_2 already numeric; no replace
+real_rt_3 already numeric; no replace
+real_rt_4 already numeric; no replace
+real2_sm already numeric; no replace
+real2_3 already numeric; no replace
+real2_rt_1 already numeric; no replace
+real2_rt_2 already numeric; no replace
+real2_rt_3 already numeric; no replace
+real2_rt_4 already numeric; no replace
+real3_sm already numeric; no replace
+real3_3 already numeric; no replace
+real3_rt_1 already numeric; no replace
+real3_rt_2 already numeric; no replace
+real3_rt_3 already numeric; no replace
+real3_rt_4 already numeric; no replace
+real4_sm already numeric; no replace
+real4_3 already numeric; no replace
+real4_rt_1 already numeric; no replace
+real4_rt_2 already numeric; no replace
+real4_rt_3 already numeric; no replace
+real4_rt_4 already numeric; no replace
+real5_sm already numeric; no replace
+real5_3 already numeric; no replace
+real5_rt_1 already numeric; no replace
+real5_rt_2 already numeric; no replace
+real5_rt_3 already numeric; no replace
+real5_rt_4 already numeric; no replace
+real6_sm already numeric; no replace
+real6_3 already numeric; no replace
+real6_rt_1 already numeric; no replace
+real6_rt_2 already numeric; no replace
+real6_rt_3 already numeric; no replace
+real6_rt_4 already numeric; no replace
+real7_sm already numeric; no replace
+real7_3 already numeric; no replace
+real7_rt_1 already numeric; no replace
+real7_rt_2 already numeric; no replace
+real7_rt_3 already numeric; no replace
+real7_rt_4 already numeric; no replace
+real8_sm already numeric; no replace
+real8_3 already numeric; no replace
+real8_rt_1 already numeric; no replace
+real8_rt_2 already numeric; no replace
+real8_rt_3 already numeric; no replace
+real8_rt_4 already numeric; no replace
+real9_sm already numeric; no replace
+real9_3 already numeric; no replace
+real9_rt_1 already numeric; no replace
+real9_rt_2 already numeric; no replace
+real9_rt_3 already numeric; no replace
+real9_rt_4 already numeric; no replace
+real10_sm already numeric; no replace
+real10_3 already numeric; no replace
+real10_rt_1 already numeric; no replace
+real10_rt_2 already numeric; no replace
+real10_rt_3 already numeric; no replace
+real10_rt_4 already numeric; no replace
+real11_sm already numeric; no replace
+real11_3 already numeric; no replace
+real11_rt_1 already numeric; no replace
+real11_rt_2 already numeric; no replace
+real11_rt_3 already numeric; no replace
+real11_rt_4 already numeric; no replace
+real12_sm already numeric; no replace
+real12_3 already numeric; no replace
+real12_rt_1 already numeric; no replace
+real12_rt_2 already numeric; no replace
+real12_rt_3 already numeric; no replace
+real12_rt_4 already numeric; no replace
+pretest2 already numeric; no replace
+neufakeimp already numeric; no replace
+neu1_2 already numeric; no replace
+neu1_rt_1 already numeric; no replace
+neu1_rt_2 already numeric; no replace
+neu1_rt_3 already numeric; no replace
+neu1_rt_4 already numeric; no replace
+neurealimp already numeric; no replace
+neu3_2 already numeric; no replace
+neu3_rt_1 already numeric; no replace
+neu3_rt_2 already numeric; no replace
+neu3_rt_3 already numeric; no replace
+neu3_rt_4 already numeric; no replace
+pretest1 already numeric; no replace
+crt_inst already numeric; no replace
+crt1_1 already numeric; no replace
+crt1_1_rt_1 already numeric; no replace
+crt1_1_rt_2 already numeric; no replace
+crt1_1_rt_3 already numeric; no replace
+crt1_1_rt_4 already numeric; no replace
+crt1_2 already numeric; no replace
+crt1_2_rt_1 already numeric; no replace
+crt1_2_rt_2 already numeric; no replace
+crt1_2_rt_3 already numeric; no replace
+crt1_2_rt_4 already numeric; no replace
+crt1_3 already numeric; no replace
+crt1_3_rt_1 already numeric; no replace
+crt1_3_rt_2 already numeric; no replace
+crt1_3_rt_3 already numeric; no replace
+crt1_3_rt_4 already numeric; no replace
+crt3_1 contains nonnumeric characters; no replace
+crt3_2 already numeric; no replace
+crt3_3 contains nonnumeric characters; no replace
+crt3_4 contains nonnumeric characters; no replace
+crt_chk already numeric; no replace
+age already numeric; no replace
+sex already numeric; no replace
+education already numeric; no replace
+english already numeric; no replace
+party already numeric; no replace
+party_text contains nonnumeric characters; no replace
+social_conserv already numeric; no replace
+economic_conserv already numeric; no replace
+potus2016 already numeric; no replace
+clintontrump already numeric; no replace
+demrep already numeric; no replace
+media1 already numeric; no replace
+media2 already numeric; no replace
+media3_1 already numeric; no replace
+media3_2 already numeric; no replace
+media3_3 already numeric; no replace
+media3_11 already numeric; no replace
+accimp already numeric; no replace
+fb_f already numeric; no replace
+socialmedia_chk already numeric; no replace
+theism1 already numeric; no replace
+theism2_1 already numeric; no replace
+theism2_2 already numeric; no replace
+theism2_3 already numeric; no replace
+theism2_4 already numeric; no replace
+note already numeric; no replace
+random already numeric; no replace
+google already numeric; no replace
+fabricate already numeric; no replace
+comments contains nonnumeric characters; no replace
+length contains nonnumeric characters; no replace
+study already numeric; no replace
+
+. append using tmp, force
+(note: variable fake1_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake1_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake1_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake2_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake2_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake2_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake3_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake3_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake3_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake4_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake4_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake4_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake5_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake5_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake5_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake6_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake6_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake6_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake7_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake7_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake7_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake8_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake8_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake8_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake9_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake9_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake9_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake10_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake10_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake10_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake11_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake11_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake11_rt_3 was float, now double to accommodate using data's values)
+(note: variable fake12_rt_1 was float, now double to accommodate using data's values)
+(note: variable fake12_rt_2 was float, now double to accommodate using data's values)
+(note: variable fake12_rt_3 was float, now double to accommodate using data's values)
+(note: variable real_rt_1 was float, now double to accommodate using data's values)
+(note: variable real_rt_2 was float, now double to accommodate using data's values)
+(note: variable real_rt_3 was float, now double to accommodate using data's values)
+(note: variable real2_rt_1 was float, now double to accommodate using data's values)
+(note: variable real2_rt_2 was float, now double to accommodate using data's values)
+(note: variable real2_rt_3 was float, now double to accommodate using data's values)
+(note: variable real3_rt_1 was float, now double to accommodate using data's values)
+(note: variable real3_rt_2 was float, now double to accommodate using data's values)
+(note: variable real3_rt_3 was float, now double to accommodate using data's values)
+(note: variable real4_rt_1 was float, now double to accommodate using data's values)
+(note: variable real4_rt_2 was float, now double to accommodate using data's values)
+(note: variable real4_rt_3 was float, now double to accommodate using data's values)
+(note: variable real5_rt_1 was float, now double to accommodate using data's values)
+(note: variable real5_rt_2 was float, now double to accommodate using data's values)
+(note: variable real5_rt_3 was float, now double to accommodate using data's values)
+(note: variable real6_rt_1 was float, now double to accommodate using data's values)
+(note: variable real6_rt_2 was float, now double to accommodate using data's values)
+(note: variable real6_rt_3 was float, now double to accommodate using data's values)
+(note: variable real7_rt_1 was float, now double to accommodate using data's values)
+(note: variable real7_rt_2 was float, now double to accommodate using data's values)
+(note: variable real7_rt_3 was float, now double to accommodate using data's values)
+(note: variable real8_rt_1 was float, now double to accommodate using data's values)
+(note: variable real8_rt_2 was float, now double to accommodate using data's values)
+(note: variable real8_rt_3 was float, now double to accommodate using data's values)
+(note: variable real9_rt_1 was float, now double to accommodate using data's values)
+(note: variable real9_rt_2 was float, now double to accommodate using data's values)
+(note: variable real9_rt_3 was float, now double to accommodate using data's values)
+(note: variable real10_rt_1 was float, now double to accommodate using data's values)
+(note: variable real10_rt_2 was float, now double to accommodate using data's values)
+(note: variable real10_rt_3 was float, now double to accommodate using data's values)
+(note: variable real11_rt_1 was float, now double to accommodate using data's values)
+(note: variable real11_rt_2 was float, now double to accommodate using data's values)
+(note: variable real11_rt_3 was float, now double to accommodate using data's values)
+(note: variable real12_rt_1 was float, now double to accommodate using data's values)
+(note: variable real12_rt_2 was float, now double to accommodate using data's values)
+(note: variable real12_rt_3 was float, now double to accommodate using data's values)
+(note: variable neu1_rt_1 was float, now double to accommodate using data's values)
+(note: variable neu1_rt_2 was float, now double to accommodate using data's values)
+(note: variable neu1_rt_3 was float, now double to accommodate using data's values)
+(note: variable neu1_rt_4 was byte, now int to accommodate using data's values)
+(note: variable neu3_rt_1 was float, now double to accommodate using data's values)
+(note: variable neu3_rt_2 was float, now double to accommodate using data's values)
+(note: variable neu3_rt_3 was float, now double to accommodate using data's values)
+(note: variable crt1_1_rt_1 was float, now double to accommodate using data's values)
+(note: variable crt1_1_rt_2 was float, now double to accommodate using data's values)
+(note: variable crt1_1_rt_3 was float, now double to accommodate using data's values)
+(note: variable crt1_2_rt_1 was float, now double to accommodate using data's values)
+(note: variable crt1_2_rt_2 was float, now double to accommodate using data's values)
+(note: variable crt1_2_rt_3 was float, now double to accommodate using data's values)
+(note: variable crt1_3_rt_1 was float, now double to accommodate using data's values)
+(note: variable crt1_3_rt_2 was float, now double to accommodate using data's values)
+(note: variable crt1_3_rt_3 was float, now double to accommodate using data's values)
+(note: variable crt3_1 was str13, now str27 to accommodate using data's values)
+(note: variable crt3_4 was str24, now str80 to accommodate using data's values)
+(note: variable party_text was str44, now str178 to accommodate using data's values)
+(note: variable comments was str433, now str494 to accommodate using data's values)
+(note: variable length was str85, now str132 to accommodate using data's values)
+
+. 
+. 
+. gen id=_n
+
+. 
+. gen accheadline = "real"
+
+. replace accheadline ="fake" if neufakeimp==1
+(1,226 real changes made)
+
+. 
+. gen didnt_finish=socialmedia_chk==.
+
+. 
+. 
+. ///////////////
+> // Descriptive statistics
+. table study
+
+----------------------
+    study |      Freq.
+----------+-----------
+        3 |      1,254
+        4 |      1,328
+----------------------
+
+. table didnt_finish fb study
+
+----------------------------------------
+          |         study and FB        
+didnt_fin | ----- 3 ----    ----- 4 ----
+ish       |     1      2        1      2
+----------+-----------------------------
+        0 | 1,158           1,248       
+        1 |    71     21       68      8
+----------------------------------------
+
+. drop if didnt_finish==1 | fb==2
+(176 observations deleted)
+
+. bysort study: sum id age 
+
+----------------------------------------------------------------------------------------------
+-> study = 3
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |      1,158    588.4568    340.4665          1       1237
+         age |      1,158    33.74093    10.48826          2         79
+
+----------------------------------------------------------------------------------------------
+-> study = 4
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |      1,248    1879.803    361.7399       1255       2546
+         age |      1,246    33.25281    10.00929         17         81
+
+
+. table study sex
+
+----------------------
+          |    Sex    
+    study |    1     2
+----------+-----------
+        3 |  453   703
+        4 |  490   757
+----------------------
+
+. table study if sex==.
+
+----------------------
+    study |      Freq.
+----------+-----------
+        3 |          2
+        4 |          1
+----------------------
+
+. 
+. table socialmedia_chk study
+
+----------------------
+SocialMed |   study   
+ia_Chk    |    3     4
+----------+-----------
+        1 |  727   780
+        2 |  431   466
+        3 |          2
+----------------------
+
+. bysort study: sum id age if socialmedia_chk ==1
+
+----------------------------------------------------------------------------------------------
+-> study = 3
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |        727    597.7744    340.4139          1       1237
+         age |        727    34.55571    10.81063          7         79
+
+----------------------------------------------------------------------------------------------
+-> study = 4
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |        780     1872.69    362.4601       1255       2546
+         age |        778    33.59254    9.903644         17         70
+
+
+. table study sex if socialmedia_chk ==1
+
+----------------------
+          |    Sex    
+    study |    1     2
+----------+-----------
+        3 |  274   451
+        4 |  282   497
+----------------------
+
+. table study if sex==. & socialmedia_chk ==1
+
+----------------------
+    study |      Freq.
+----------+-----------
+        3 |          2
+        4 |          1
+----------------------
+
+. /////////////////
+> 
+. ////////////////////
+> // Creat variable indicating whether they report ever sharing political content on social me
+> dia
+. gen socialmedia_chk1 = socialmedia_chk==1
+
+. replace socialmedia_chk1=. if socialmedia_chk==.
+(0 real changes made)
+
+. //////////////////////
+> 
+. ///////////////////
+> // Treatment effect on perceived importance of accuracy?
+. 
+. // no treatment effect on accuracy importance qs
+. bysort study: ttest accimp if socialmedia_chk ==1, by(condition)
+
+----------------------------------------------------------------------------------------------
+-> study = 3
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+       1 |     359    4.253482    .0495803     .939412    4.155977    4.350987
+       2 |     367    4.288828    .0521556    .9991584    4.186266    4.391391
+---------+--------------------------------------------------------------------
+combined |     726     4.27135     .035984    .9695673    4.200705    4.341995
+---------+--------------------------------------------------------------------
+    diff |           -.0353464    .0720101                 -.17672    .1060271
+------------------------------------------------------------------------------
+    diff = mean(1) - mean(2)                                      t =  -0.4909
+Ho: diff = 0                                     degrees of freedom =      724
+
+    Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = 0.3118         Pr(|T| > |t|) = 0.6237          Pr(T > t) = 0.6882
+
+----------------------------------------------------------------------------------------------
+-> study = 4
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+       1 |     393      4.3257    .0440043    .8723508    4.239186    4.412214
+       2 |     381    4.333333    .0485077    .9468322    4.237956     4.42871
+---------+--------------------------------------------------------------------
+combined |     774    4.329457    .0326803    .9091944    4.265305     4.39361
+---------+--------------------------------------------------------------------
+    diff |           -.0076336    .0654102               -.1360366    .1207694
+------------------------------------------------------------------------------
+    diff = mean(1) - mean(2)                                      t =  -0.1167
+Ho: diff = 0                                     degrees of freedom =      772
+
+    Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = 0.4536         Pr(|T| > |t|) = 0.9071          Pr(T > t) = 0.5464
+
+. ttest accimp if socialmedia_chk ==1, by(condition)
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+       1 |     752    4.291223    .0330056    .9050988    4.226429    4.356018
+       2 |     748    4.311497    .0355566    .9724595    4.241694      4.3813
+---------+--------------------------------------------------------------------
+combined |   1,500    4.301333    .0242458    .9390347    4.253774    4.348893
+---------+--------------------------------------------------------------------
+    diff |           -.0202739    .0485051                -.115419    .0748711
+------------------------------------------------------------------------------
+    diff = mean(1) - mean(2)                                      t =  -0.4180
+Ho: diff = 0                                     degrees of freedom =     1498
+
+    Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = 0.3380         Pr(|T| > |t|) = 0.6760          Pr(T > t) = 0.6620
+
+. ttest accimp_friends if socialmedia_chk ==1, by(condition)
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+       1 |     388    3.226804    .0581672    1.145761    3.112441    3.341167
+       2 |     382    3.180628    .0561297    1.097045    3.070265    3.290991
+---------+--------------------------------------------------------------------
+combined |     770    3.203896    .0404112    1.121366    3.124567    3.283226
+---------+--------------------------------------------------------------------
+    diff |            .0461759    .0808604               -.1125577    .2049094
+------------------------------------------------------------------------------
+    diff = mean(1) - mean(2)                                      t =   0.5711
+Ho: diff = 0                                     degrees of freedom =      768
+
+    Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = 0.7159         Pr(|T| > |t|) = 0.5681          Pr(T > t) = 0.2841
+
+. 
+. // interesting sidenote: people think that they care more about accuracy than their friends 
+> do
+. ttest accimp==accimp_friends
+
+Paired t test
+------------------------------------------------------------------------------
+Variable |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+  accimp |   1,223    4.273917    .0290502    1.015928    4.216923     4.33091
+accimp~s |   1,223    3.086672    .0329116    1.150967    3.022103    3.151242
+---------+--------------------------------------------------------------------
+    diff |   1,223    1.187244    .0376644    1.317179     1.11335    1.261139
+------------------------------------------------------------------------------
+     mean(diff) = mean(accimp - accimp_friends)                   t =  31.5216
+ Ho: mean(diff) = 0                              degrees of freedom =     1222
+
+ Ha: mean(diff) < 0           Ha: mean(diff) != 0           Ha: mean(diff) > 0
+ Pr(T < t) = 1.0000         Pr(|T| > |t|) = 0.0000          Pr(T > t) = 0.0000
+
+. ////////////////////////
+> 
+. /////////////////////////
+> // reshape data to long format & do other pre-processing
+. drop *_sm
+
+. drop *_rt_1
+
+. drop *_rt_2
+
+. drop *_rt_4
+
+. rename real_rt_3 real1_rt_3
+
+. rename fake*_rt_3 fake*_sm_rt
+
+. rename real*_rt_3 real*_sm_rt
+
+. rename fake*_3 fake_sm*
+
+. rename real*_3 real_sm*
+
+. rename fake*_sm_rt fake_sm_rt*
+
+. rename real*_sm_rt real_sm_rt*
+
+. reshape long fake_sm real_sm fake_sm_rt real_sm_rt   fakeC_sm realC_sm , i(id) j(item_num)
+(note: j = 1 2 3 4 5 6 7 8 9 10 11 12)
+(note: fakeC_sm1 not found)
+(note: realC_sm1 not found)
+(note: fakeC_sm2 not found)
+(note: realC_sm2 not found)
+(note: fakeC_sm3 not found)
+(note: realC_sm3 not found)
+(note: fakeC_sm4 not found)
+(note: realC_sm4 not found)
+(note: fakeC_sm5 not found)
+(note: realC_sm5 not found)
+(note: fakeC_sm6 not found)
+(note: realC_sm6 not found)
+(note: fakeC_sm7 not found)
+(note: realC_sm7 not found)
+(note: fakeC_sm8 not found)
+(note: realC_sm8 not found)
+(note: fakeC_sm9 not found)
+(note: realC_sm9 not found)
+(note: fakeC_sm10 not found)
+(note: realC_sm10 not found)
+(note: fakeC_sm11 not found)
+(note: realC_sm11 not found)
+(note: fakeC_sm12 not found)
+(note: realC_sm12 not found)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                     2406   ->   28872
+Number of variables                 141   ->     100
+j variable (12 values)                    ->   item_num
+xij variables:
+        fake_sm1 fake_sm2 ... fake_sm12   ->   fake_sm
+        real_sm1 real_sm2 ... real_sm12   ->   real_sm
+fake_sm_rt1 fake_sm_rt2 ... fake_sm_rt12  ->   fake_sm_rt
+real_sm_rt1 real_sm_rt2 ... real_sm_rt12  ->   real_sm_rt
+     fakeC_sm1 fakeC_sm2 ... fakeC_sm12   ->   fakeC_sm
+     realC_sm1 realC_sm2 ... realC_sm12   ->   realC_sm
+-----------------------------------------------------------------------------
+
+. replace fake_sm = fakeC_sm if fake_sm==.
+(0 real changes made)
+
+. replace real_sm = realC_sm if real_sm==.
+(0 real changes made)
+
+. rename fake_sm sm1
+
+. rename real_sm sm2
+
+. rename fake_sm_rt rt1
+
+. rename real_sm_rt rt2
+
+. gen uniqueI = id*1000+item_num
+
+. reshape long sm acc rt , i(unique) j(real)
+(note: j = 1 2)
+(note: acc1 not found)
+(note: acc2 not found)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                    28872   ->   57744
+Number of variables                 101   ->     101
+j variable (2 values)                     ->   real
+xij variables:
+                                sm1 sm2   ->   sm
+                              acc1 acc2   ->   acc
+                                rt1 rt2   ->   rt
+-----------------------------------------------------------------------------
+
+. replace real=real-1
+(57,744 real changes made)
+
+. drop fake
+
+. gen fake=1-real
+
+. replace sm=(sm-1)/5
+variable sm was byte now float
+(57,617 real changes made)
+
+. gen politically_concordant = (item_num<=6 & demrep==2) | (item_num>6 & demrep==1)
+
+. replace item_num=item_num+(real)*12                             
+(28,872 real changes made)
+
+. replace item_num=item_num+24 if study==3
+(27,792 real changes made)
+
+. replace condition=condition-1
+(57,744 real changes made)
+
+. 
+. // create binary "likely to share" variable for plots
+. gen Bsm=round(sm)
+(127 missing values generated)
+
+. 
+. 
+. label define bla1x 0 "Control" 1 "Treatment"
+
+. label values condition bla1x
+
+. 
+. label define bla2x 0 "False" 1 "True"
+
+. label values real bla2x
+
+. 
+. label define bla5x 1 "Democrat" 2 "Republican"
+
+. label values demrep bla5x
+
+. 
+. label define bla3xx 0 "Discordant" 1 "Concordant"
+
+. label values politically_concordant  bla3xx
+
+. ///////////////////////////
+> 
+. 
+. 
+. 
+. ///////////////////
+> // Visualizations
+. 
+. // for Figure 2a,b
+. xi: bysort study condition real: cluster2 Bsm if socialmedia_chk==1, tcluster(id) fcluster(i
+> tem_num)
+
+----------------------------------------------------------------------------------------------
+-> study = 3, condition = Control, real = False
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4307
+                                                       F(  0,  4306) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       359                    Root MSE      =  0.4507
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |    .283492   .0186985    15.16   0.000     .2468333    .3201507
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> study = 3, condition = Control, real = True
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4295
+                                                       F(  0,  4294) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       359                    Root MSE      =  0.4716
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .3336438   .0256791    12.99   0.000     .2832994    .3839881
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> study = 3, condition = Treatment, real = False
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4403
+                                                       F(  0,  4402) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       368                    Root MSE      =  0.4157
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .2221213   .0192914    11.51   0.000     .1843005    .2599421
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> study = 3, condition = Treatment, real = True
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4412
+                                                       F(  0,  4411) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       368                    Root MSE      =  0.4747
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .3427017   .0249864    13.72   0.000     .2937158    .3916877
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> study = 4, condition = Control, real = False
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4735
+                                                       F(  0,  4734) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       396                    Root MSE      =  0.4668
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .3205913   .0267564    11.98   0.000     .2681364    .3730463
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> study = 4, condition = Control, real = True
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4739
+                                                       F(  0,  4738) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       396                    Root MSE      =  0.4800
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .3597805   .0254774    14.12   0.000     .3098329    .4097282
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> study = 4, condition = Treatment, real = False
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4601
+                                                       F(  0,  4600) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       384                    Root MSE      =  0.4365
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .2560313   .0245435    10.43   0.000     .2079143    .3041483
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> study = 4, condition = Treatment, real = True
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4602
+                                                       F(  0,  4601) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    12                  R-squared     =  0.0000
+Number of clusters (id) =       384                    Root MSE      =  0.4853
+------------------------------------------------------------------------------
+         Bsm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .3794003   .0286032    13.26   0.000     .3233242    .4354764
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. 
+. // for Extended Data Figure 2
+. table sm  condition real if socialmedia_chk==1 & study==3
+
+--------------------------------------------------------
+          |              real and Condition             
+          | ------- False ------    ------- True -------
+       sm |   Control  Treatment      Control  Treatment
+----------+---------------------------------------------
+        0 |     2,010      2,354        1,471      1,462
+       .2 |       624        701          778        894
+       .4 |       452        370          613        544
+       .6 |       552        470          705        780
+       .8 |       385        310          473        532
+        1 |       284        198          255        200
+--------------------------------------------------------
+
+. table sm  condition real if socialmedia_chk==1 & study==4
+
+--------------------------------------------------------
+          |              real and Condition             
+          | ------- False ------    ------- True -------
+       sm |   Control  Treatment      Control  Treatment
+----------+---------------------------------------------
+        0 |     2,219      2,488        1,493      1,504
+       .2 |       611        577          899        775
+       .4 |       387        358          642        577
+       .6 |       548        467          829        842
+       .8 |       451        370          538        557
+        1 |       519        341          338        347
+--------------------------------------------------------
+
+. ////////////////////////
+> 
+. 
+. ////////////////
+> // ANALYSIS - Table S2
+. 
+. // study 3 - main analysis (only subjects who sometimes share political news)
+. xi: cluster2 sm i.condition*real if socialmedia_chk==1 & study==3, tcluster(id) fcluster(ite
+> m_num)
+i.condition       _Icondition_0-1     (naturally coded; _Icondition_0 omitted)
+i.condit~n*real   _IconXreal_#        (coded as above)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   17417
+                                                       F(  3, 17413) =  118.48
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    24                  R-squared     =  0.0192
+Number of clusters (id) =       727                    Root MSE      =  0.3198
+-------------------------------------------------------------------------------
+           sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+_Icondition_1 |  -.0545058   .0145283    -3.75   0.000    -.0829828   -.0260288
+         real |   .0539752   .0204534     2.64   0.008     .0138845     .094066
+ _IconXreal_1 |   .0529429   .0107609     4.92   0.000     .0318505    .0740353
+        _cons |    .285303   .0152185    18.75   0.000     .2554733    .3151327
+-------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. //     look at simple effects
+. test real=0 // simple effect of real in control
+
+ ( 1)  real = 0
+
+       F(  1, 17413) =    6.96
+            Prob > F =    0.0083
+
+. disp _b[real]
+.05397524
+
+. test real+_IconXreal_1 =0 // simple effect of real in treatment
+
+ ( 1)  real + _IconXreal_1 = 0
+
+       F(  1, 17413) =   27.89
+            Prob > F =    0.0000
+
+. disp _b[real]+_b[_IconXreal_1]
+.10691814
+
+. test _Icondition_1=0 // simple effect of condition for false
+
+ ( 1)  _Icondition_1 = 0
+
+       F(  1, 17413) =   14.08
+            Prob > F =    0.0002
+
+. disp _b[_Icondition_1]
+-.05450581
+
+. test _Icondition_1+_IconXreal_1 =0 // simple effect of condition for real
+
+ ( 1)  _Icondition_1 + _IconXreal_1 = 0
+
+       F(  1, 17413) =    0.01
+            Prob > F =    0.9185
+
+. disp _b[_Icondition_1]+_b[_IconXreal_1]
+-.00156291
+
+. test _IconXreal_1 =0
+
+ ( 1)  _IconXreal_1 = 0
+
+       F(  1, 17413) =   24.21
+            Prob > F =    0.0000
+
+. 
+. // study 4 - main analysis (only subjects who sometimes share political news)
+. xi: cluster2 sm i.condition*real if socialmedia_chk==1 & study==4, tcluster(id) fcluster(ite
+> m_num)
+i.condition       _Icondition_0-1     (naturally coded; _Icondition_0 omitted)
+i.condit~n*real   _IconXreal_#        (coded as above)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   18677
+                                                       F(  3, 18673) =  106.40
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    24                  R-squared     =  0.0163
+Number of clusters (id) =       780                    Root MSE      =  0.3411
+-------------------------------------------------------------------------------
+           sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+_Icondition_1 |  -.0581955   .0168075    -3.46   0.001    -.0911397   -.0252514
+         real |   .0454832   .0271055     1.68   0.093     -.007646    .0986124
+ _IconXreal_1 |   .0648046   .0146652     4.42   0.000     .0360595    .0935497
+        _cons |   .3137487   .0221071    14.19   0.000     .2704168    .3570806
+-------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. //     look at simple effects
+. test real=0 // simple effect of real in control
+
+ ( 1)  real = 0
+
+       F(  1, 18673) =    2.82
+            Prob > F =    0.0934
+
+. disp _b[real]
+.04548323
+
+. test real+_IconXreal_1 =0 // simple effect of real in treatment
+
+ ( 1)  real + _IconXreal_1 = 0
+
+       F(  1, 18673) =   16.23
+            Prob > F =    0.0001
+
+. disp _b[real]+_b[_IconXreal_1]
+.1102878
+
+. test _Icondition_1=0 // simple effect of condition for false
+
+ ( 1)  _Icondition_1 = 0
+
+       F(  1, 18673) =   11.99
+            Prob > F =    0.0005
+
+. disp _b[_Icondition_1]
+-.05819554
+
+. test _Icondition_1+_IconXreal_1 =0 // simple effect of condition for real
+
+ ( 1)  _Icondition_1 + _IconXreal_1 = 0
+
+       F(  1, 18673) =    0.23
+            Prob > F =    0.6280
+
+. disp _b[_Icondition_1]+_b[_IconXreal_1]
+.00660903
+
+. test _IconXreal_1 =0
+
+ ( 1)  _IconXreal_1 = 0
+
+       F(  1, 18673) =   19.53
+            Prob > F =    0.0000
+
+. 
+. // study3+4 with politics moderation - main analysis (only subjects who sometimes share poli
+> tical news)
+. preserve
+
+. keep if socialmedia_chk==1
+(21,576 observations deleted)
+
+. //  z-score party
+. egen z_demrep=std(demrep)
+(48 missing values generated)
+
+. replace z_demrep=0 if demrep==.
+(48 real changes made)
+
+. egen z_concordant=std(politically_conc)
+
+. // create interactions
+. gen conditionXreal=condition*real
+
+. gen conditionXdr=condition*z_demrep
+
+. gen drXreal=z_demrep*real
+
+. gen conditionXdrXreal=condition*z_demrep*real
+
+. gen realXconcordant=real*z_concordant
+
+. gen conditionXrealXconcordant=condition*real*z_concordant
+
+. gen conditionXconcordant=condition*z_concordant
+
+. gen concordantXdr=z_concordant*z_demrep
+
+. gen concordantXconditionXdr=z_concordant*condition*z_demrep
+
+. gen concordantXdrXreal=z_concordant*z_demrep*real
+
+. gen concordantXconditionXdrXreal=z_concordant*condition*z_demrep*real
+
+. // regression
+. xi: cluster2 sm  condition real z_demrep conditionXreal drXreal conditionXdr conditionXdrXre
+> al z_concordant realXconcordant conditionXconcordant conditionXrealXconcordant concordantXdr
+>  concordantXconditionXdr concordantXdrXreal concordantXconditionXdrXreal, tcluster(id) fclus
+> ter(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   36094
+                                                       F( 15, 36078) =  168.35
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    48                  R-squared     =  0.0630
+Number of clusters (id) =      1507                    Root MSE      =  0.3236
+---------------------------------------------------------------------------------------------
+                         sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+----------------------------+----------------------------------------------------------------
+                  condition |  -.0557387    .010963    -5.08   0.000    -.0772266   -.0342508
+                       real |   .0494331   .0160858     3.07   0.002     .0179045    .0809617
+                   z_demrep |   .0168912   .0093939     1.80   0.072    -.0015212    .0353035
+             conditionXreal |   .0588591   .0085712     6.87   0.000     .0420594    .0756588
+                    drXreal |    .003217   .0092974     0.35   0.729    -.0150062    .0214402
+               conditionXdr |   .0050766   .0105857     0.48   0.632    -.0156717     .025825
+          conditionXdrXreal |  -.0158615   .0086365    -1.84   0.066    -.0327892    .0010662
+               z_concordant |   .0683522   .0072338     9.45   0.000     .0541737    .0825308
+            realXconcordant |   .0035093   .0106942     0.33   0.743    -.0174516    .0244703
+       conditionXconcordant |  -.0155698   .0046237    -3.37   0.001    -.0246323   -.0065072
+  conditionXrealXconcordant |   .0224248    .005273     4.25   0.000     .0120895      .03276
+              concordantXdr |  -.0035246   .0092841    -0.38   0.704    -.0217218    .0146725
+    concordantXconditionXdr |   .0072499    .004714     1.54   0.124    -.0019898    .0164895
+         concordantXdrXreal |   .0157425   .0135178     1.16   0.244    -.0107528    .0422378
+concordantXconditionXdrXr~l |  -.0135806   .0044753    -3.03   0.002    -.0223524   -.0048089
+                      _cons |   .2997501   .0125003    23.98   0.000     .2752491    .3242511
+---------------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. test conditionXrealXconcordant=0
+
+ ( 1)  conditionXrealXconcordant = 0
+
+       F(  1, 36078) =   18.09
+            Prob > F =    0.0000
+
+. // separately for Dems v Reps
+. xi: cluster2 sm  condition real conditionXreal z_concordant realXconcordant conditionXconcor
+> dant conditionXrealXconcordant if demrep==1, tcluster(id) fcluster(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   24644
+                                                       F(  7, 24636) =  234.25
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    48                  R-squared     =  0.0593
+Number of clusters (id) =      1029                    Root MSE      =  0.3206
+-------------------------------------------------------------------------------------------
+                       sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------------+----------------------------------------------------------------
+                condition |  -.0591673    .013453    -4.40   0.000    -.0855359   -.0327987
+                     real |   .0477815   .0188627     2.53   0.011     .0108095    .0847535
+           conditionXreal |   .0691967     .01089     6.35   0.000     .0478517    .0905417
+             z_concordant |   .0711126   .0115206     6.17   0.000     .0485316    .0936936
+          realXconcordant |  -.0077332   .0179145    -0.43   0.666    -.0428466    .0273802
+     conditionXconcordant |  -.0205247    .005883    -3.49   0.000    -.0320558   -.0089936
+conditionXrealXconcordant |    .032111   .0060654     5.29   0.000     .0202225    .0439995
+                    _cons |   .2878983   .0146691    19.63   0.000      .259146    .3166506
+-------------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. test conditionXreal=0
+
+ ( 1)  conditionXreal = 0
+
+       F(  1, 24636) =   40.38
+            Prob > F =    0.0000
+
+. xi: cluster2 sm  condition real conditionXreal z_concordant realXconcordant conditionXconcor
+> dant conditionXrealXconcordant if demrep==2, tcluster(id) fcluster(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   11402
+                                                       F(  7, 11394) =  112.21
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    48                  R-squared     =  0.0638
+Number of clusters (id) =       476                    Root MSE      =  0.3296
+-------------------------------------------------------------------------------------------
+                       sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------------+----------------------------------------------------------------
+                condition |  -.0482895   .0184961    -2.61   0.009    -.0845451   -.0120339
+                     real |   .0546716   .0178997     3.05   0.002     .0195851    .0897581
+           conditionXreal |   .0351223   .0144277     2.43   0.015     .0068416    .0634029
+             z_concordant |   .0635143   .0123955     5.12   0.000     .0392169    .0878117
+          realXconcordant |   .0261471   .0157427     1.66   0.097    -.0047113    .0570055
+     conditionXconcordant |  -.0048956   .0080072    -0.61   0.541    -.0205911    .0107998
+conditionXrealXconcordant |   .0028732   .0086333     0.33   0.739    -.0140496    .0197959
+                    _cons |     .32424   .0174789    18.55   0.000     .2899784    .3585017
+-------------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. test conditionXreal=0
+
+ ( 1)  conditionXreal = 0
+
+       F(  1, 11394) =    5.93
+            Prob > F =    0.0149
+
+. restore
+
+. 
+. 
+. // study 3 - all subjects
+. xi: cluster2 sm i.condition*real if study==3, tcluster(id) fcluster(item_num)
+i.condition       _Icondition_0-1     (naturally coded; _Icondition_0 omitted)
+i.condit~n*real   _IconXreal_#        (coded as above)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   27732
+                                                       F(  3, 27728) =  113.20
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    24                  R-squared     =  0.0118
+Number of clusters (id) =      1158                    Root MSE      =  0.3058
+-------------------------------------------------------------------------------
+           sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+_Icondition_1 |  -.0294472   .0116866    -2.52   0.012    -.0523536   -.0065409
+         real |   .0383278   .0169475     2.26   0.024     .0051099    .0715458
+ _IconXreal_1 |   .0474733   .0081846     5.80   0.000      .031431    .0635156
+        _cons |   .2342783   .0128188    18.28   0.000     .2091527    .2594038
+-------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. //     look at simple effects
+. test real=0 // simple effect of real in control
+
+ ( 1)  real = 0
+
+       F(  1, 27728) =    5.11
+            Prob > F =    0.0237
+
+. disp _b[real]
+.03832784
+
+. test real+_IconXreal_1 =0 // simple effect of real in treatment
+
+ ( 1)  real + _IconXreal_1 = 0
+
+       F(  1, 27728) =   25.57
+            Prob > F =    0.0000
+
+. disp _b[real]+_b[_IconXreal_1]
+.08580113
+
+. test _Icondition_1=0 // simple effect of condition for false
+
+ ( 1)  _Icondition_1 = 0
+
+       F(  1, 27728) =    6.35
+            Prob > F =    0.0117
+
+. disp _b[_Icondition_1]
+-.02944722
+
+. test _Icondition_1+_IconXreal_1 =0 // simple effect of condition for real
+
+ ( 1)  _Icondition_1 + _IconXreal_1 = 0
+
+       F(  1, 27728) =    2.04
+            Prob > F =    0.1535
+
+. disp _b[_Icondition_1]+_b[_IconXreal_1]
+.01802607
+
+. test _IconXreal_1 =0
+
+ ( 1)  _IconXreal_1 = 0
+
+       F(  1, 27728) =   33.64
+            Prob > F =    0.0000
+
+. 
+. // study 4 - all subjects
+. xi: cluster2 sm i.condition*real if study==4, tcluster(id) fcluster(item_num)
+i.condition       _Icondition_0-1     (naturally coded; _Icondition_0 omitted)
+i.condit~n*real   _IconXreal_#        (coded as above)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   29885
+                                                       F(  3, 29881) =  148.13
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    24                  R-squared     =  0.0141
+Number of clusters (id) =      1248                    Root MSE      =  0.3256
+-------------------------------------------------------------------------------
+           sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+_Icondition_1 |  -.0457424    .013872    -3.30   0.001    -.0729322   -.0185526
+         real |   .0377642   .0225185     1.68   0.094    -.0063731    .0819015
+ _IconXreal_1 |   .0634851   .0116516     5.45   0.000     .0406476    .0863227
+        _cons |   .2632331   .0182379    14.43   0.000     .2274861    .2989801
+-------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. //     look at simple effects
+. test real=0 // simple effect of real in control
+
+ ( 1)  real = 0
+
+       F(  1, 29881) =    2.81
+            Prob > F =    0.0935
+
+. disp _b[real]
+.03776419
+
+. test real+_IconXreal_1 =0 // simple effect of real in treatment
+
+ ( 1)  real + _IconXreal_1 = 0
+
+       F(  1, 29881) =   20.17
+            Prob > F =    0.0000
+
+. disp _b[real]+_b[_IconXreal_1]
+.10124934
+
+. test _Icondition_1=0 // simple effect of condition for false
+
+ ( 1)  _Icondition_1 = 0
+
+       F(  1, 29881) =   10.87
+            Prob > F =    0.0010
+
+. disp _b[_Icondition_1]
+-.04574242
+
+. test _Icondition_1+_IconXreal_1 =0 // simple effect of condition for real
+
+ ( 1)  _Icondition_1 + _IconXreal_1 = 0
+
+       F(  1, 29881) =    2.49
+            Prob > F =    0.1149
+
+. disp _b[_Icondition_1]+_b[_IconXreal_1]
+.01774273
+
+. test _IconXreal_1 =0
+
+ ( 1)  _IconXreal_1 = 0
+
+       F(  1, 29881) =   29.69
+            Prob > F =    0.0000
+
+. 
+. // study3+4 with politics moderation - all subjects
+. preserve
+
+. //  z-score party
+. egen z_demrep=std(demrep)
+(168 missing values generated)
+
+. replace z_demrep=0 if demrep==.
+(168 real changes made)
+
+. egen z_concordant=std(politically_conc)
+
+. // create interactions
+. gen conditionXreal=condition*real
+
+. gen conditionXdr=condition*z_demrep
+
+. gen drXreal=z_demrep*real
+
+. gen conditionXdrXreal=condition*z_demrep*real
+
+. gen realXconcordant=real*z_concordant
+
+. gen conditionXrealXconcordant=condition*real*z_concordant
+
+. gen conditionXconcordant=condition*z_concordant
+
+. gen concordantXdr=z_concordant*z_demrep
+
+. gen concordantXconditionXdr=z_concordant*condition*z_demrep
+
+. gen concordantXdrXreal=z_concordant*z_demrep*real
+
+. gen concordantXconditionXdrXreal=z_concordant*condition*z_demrep*real
+
+. // regression
+. xi: cluster2 sm  condition real z_demrep conditionXreal drXreal conditionXdr conditionXdrXre
+> al z_concordant realXconcordant conditionXconcordant conditionXrealXconcordant concordantXdr
+>  concordantXconditionXdr concordantXdrXreal concordantXconditionXdrXreal, tcluster(id) fclus
+> ter(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   57617
+                                                       F( 15, 57601) =  186.84
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    48                  R-squared     =  0.0454
+Number of clusters (id) =      2406                    Root MSE      =  0.3113
+---------------------------------------------------------------------------------------------
+                         sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+----------------------------+----------------------------------------------------------------
+                  condition |  -.0371504   .0090168    -4.12   0.000    -.0548234   -.0194774
+                       real |   .0379548   .0137836     2.75   0.006      .010939    .0649707
+                   z_demrep |   .0090213    .008038     1.12   0.262    -.0067331    .0247758
+             conditionXreal |   .0556659   .0068105     8.17   0.000     .0423174    .0690144
+                    drXreal |   .0024884   .0079154     0.31   0.753    -.0130259    .0180027
+               conditionXdr |   .0111036   .0080916     1.37   0.170     -.004756    .0269633
+          conditionXdrXreal |  -.0112553   .0057308    -1.96   0.050    -.0224876   -.0000229
+               z_concordant |   .0523957    .006249     8.38   0.000     .0401476    .0646437
+            realXconcordant |   .0039617   .0089677     0.44   0.659     -.013615    .0215384
+       conditionXconcordant |  -.0072275    .003153    -2.29   0.022    -.0134074   -.0010477
+  conditionXrealXconcordant |   .0163096   .0029013     5.62   0.000     .0106231    .0219962
+              concordantXdr |  -.0054739   .0083374    -0.66   0.511    -.0218153    .0108674
+    concordantXconditionXdr |   .0092967   .0044017     2.11   0.035     .0006694     .017924
+         concordantXdrXreal |   .0159165   .0122653     1.30   0.194    -.0081236    .0399566
+concordantXconditionXdrXr~l |  -.0131608   .0038151    -3.45   0.001    -.0206385   -.0056831
+                      _cons |   .2490243   .0105503    23.60   0.000     .2283456    .2697029
+---------------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. test conditionXrealXconcordant=0
+
+ ( 1)  conditionXrealXconcordant = 0
+
+       F(  1, 57601) =   31.60
+            Prob > F =    0.0000
+
+. // separately for Dems v Reps
+. xi: cluster2 sm  condition real conditionXreal z_concordant realXconcordant conditionXconcor
+> dant conditionXrealXconcordant if demrep==1, tcluster(id) fcluster(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   38124
+                                                       F(  7, 38116) =  250.76
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    48                  R-squared     =  0.0422
+Number of clusters (id) =      1592                    Root MSE      =  0.3098
+-------------------------------------------------------------------------------------------
+                       sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------------+----------------------------------------------------------------
+                condition |  -.0449549   .0109758    -4.10   0.000    -.0664678    -.023442
+                     real |   .0365704   .0160607     2.28   0.023     .0050909    .0680498
+           conditionXreal |   .0635197   .0083396     7.62   0.000     .0471739    .0798655
+             z_concordant |   .0562158   .0099453     5.65   0.000     .0367229    .0757088
+          realXconcordant |  -.0077565     .01549    -0.50   0.617    -.0381173    .0226044
+     conditionXconcordant |  -.0139472   .0050951    -2.74   0.006    -.0239337   -.0039608
+conditionXrealXconcordant |   .0258388   .0048563     5.32   0.000     .0163203    .0353573
+                    _cons |   .2426787   .0123701    19.62   0.000      .218433    .2669243
+-------------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. test conditionXreal=0
+
+ ( 1)  conditionXreal = 0
+
+       F(  1, 38116) =   58.01
+            Prob > F =    0.0000
+
+. xi: cluster2 sm  condition real conditionXreal z_concordant realXconcordant conditionXconcor
+> dant conditionXrealXconcordant if demrep==2, tcluster(id) fcluster(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   19325
+                                                       F(  7, 19317) =  131.16
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    48                  R-squared     =  0.0462
+Number of clusters (id) =       807                    Root MSE      =  0.3145
+-------------------------------------------------------------------------------------------
+                       sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------------+----------------------------------------------------------------
+                condition |  -.0214415    .014061    -1.52   0.127    -.0490023    .0061194
+                     real |   .0418197   .0156582     2.67   0.008     .0111283    .0725111
+           conditionXreal |   .0397255    .009824     4.04   0.000     .0204695    .0589814
+             z_concordant |   .0446338   .0112996     3.95   0.000     .0224856     .066782
+          realXconcordant |   .0259482   .0145454     1.78   0.074     -.002562    .0544584
+     conditionXconcordant |   .0057167   .0060165     0.95   0.342    -.0060761    .0175096
+conditionXrealXconcordant |  -.0020434   .0047785    -0.43   0.669    -.0114096    .0073228
+                    _cons |   .2617688   .0148787    17.59   0.000     .2326052    .2909323
+-------------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. test conditionXreal=0
+
+ ( 1)  conditionXreal = 0
+
+       F(  1, 19317) =   16.35
+            Prob > F =    0.0001
+
+. restore
+
+. //////////////////
+> 
+. 
+. 
+. 
+. 
+. 
+. 
+. /////////////////////
+> // define pre-test ratings for each headline
+. gen familiarity=.
+(57,744 missing values generated)
+
+. gen likelihood=.
+(57,744 missing values generated)
+
+. gen politic =.                          
+(57,744 missing values generated)
+
+. 
+. replace item_num=item_num-24 if study==3
+(27,792 real changes made)
+
+. 
+. replace politic =       3.822916667     if item_num==   13      & study==3
+(1,158 real changes made)
+
+. replace politic =       3.510416667     if item_num==   14      & study==3
+(1,158 real changes made)
+
+. replace politic =       3.21875 if item_num==   15      & study==3
+(1,158 real changes made)
+
+. replace politic =       3.65625 if item_num==   16      & study==3
+(1,158 real changes made)
+
+. replace politic =       3.822916667     if item_num==   17      & study==3
+(1,158 real changes made)
+
+. replace politic =       3.557894737     if item_num==   18      & study==3
+(1,158 real changes made)
+
+. replace politic =       2.604166667     if item_num==   19      & study==3
+(1,158 real changes made)
+
+. replace politic =       2.75    if item_num==   20      & study==3
+(1,158 real changes made)
+
+. replace politic =       2.302083333     if item_num==   21      & study==3
+(1,158 real changes made)
+
+. replace politic =       2.71875 if item_num==   22      & study==3
+(1,158 real changes made)
+
+. replace politic =       2.135416667     if item_num==   23      & study==3
+(1,158 real changes made)
+
+. replace politic =       2.239583333     if item_num==   24      & study==3
+(1,158 real changes made)
+
+. replace politic =       3.676767677     if item_num==   1       & study==3
+(1,158 real changes made)
+
+. replace politic =       4.060606061     if item_num==   2       & study==3
+(1,158 real changes made)
+
+. replace politic =       3.757575758     if item_num==   3       & study==3
+(1,158 real changes made)
+
+. replace politic =       3.666666667     if item_num==   4       & study==3
+(1,158 real changes made)
+
+. replace politic =       3.929292929     if item_num==   5       & study==3
+(1,158 real changes made)
+
+. replace politic =       3.908163265     if item_num==   6       & study==3
+(1,158 real changes made)
+
+. replace politic =       2.454545455     if item_num==   7       & study==3
+(1,158 real changes made)
+
+. replace politic =       2.171717172     if item_num==   8       & study==3
+(1,158 real changes made)
+
+. replace politic =       2.535353535     if item_num==   9       & study==3
+(1,158 real changes made)
+
+. replace politic =       2.474747475     if item_num==   10      & study==3
+(1,158 real changes made)
+
+. replace politic =       1.616161616     if item_num==   11      & study==3
+(1,158 real changes made)
+
+. replace politic =       2.303030303     if item_num==   12      & study==3
+(1,158 real changes made)
+
+. 
+. replace likelihood =    4.979166667     if item_num==   13      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    3.96875 if item_num==   14      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.135416667     if item_num==   15      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.572916667     if item_num==   16      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.489583333     if item_num==   17      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.5625  if item_num==   18      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.614583333     if item_num==   19      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.114583333     if item_num==   20      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.53125 if item_num==   21      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.708333333     if item_num==   22      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    4.197916667     if item_num==   23      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    5       if item_num==   24      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    2.777777778     if item_num==   1       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    1.939393939     if item_num==   2       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    3.373737374     if item_num==   3       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    3.363636364     if item_num==   4       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    1.909090909     if item_num==   5       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    2.402061856     if item_num==   6       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    3.282828283     if item_num==   7       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    3.242424242     if item_num==   8       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    2.01010101      if item_num==   9       & study==3
+(1,158 real changes made)
+
+. replace likelihood =    2.357142857     if item_num==   10      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    2.333333333     if item_num==   11      & study==3
+(1,158 real changes made)
+
+. replace likelihood =    3.581632653     if item_num==   12      & study==3
+(1,158 real changes made)
+
+. 
+. replace familiarity=    2.115789474     if item_num==   13      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.697916667     if item_num==   14      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.75    if item_num==   15      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.75    if item_num==   16      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.604166667     if item_num==   17      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.260416667     if item_num==   18      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.583333333     if item_num==   19      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.5     if item_num==   20      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.604166667     if item_num==   21      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.583333333     if item_num==   22      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.410526316     if item_num==   23      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.635416667     if item_num==   24      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.757575758     if item_num==   1       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.919191919     if item_num==   2       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.969387755     if item_num==   3       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.767676768     if item_num==   4       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.897959184     if item_num==   5       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.848484848     if item_num==   6       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.919191919     if item_num==   7       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.828282828     if item_num==   8       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.887755102     if item_num==   9       & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.484848485     if item_num==   10      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.616161616     if item_num==   11      & study==3
+(1,158 real changes made)
+
+. replace familiarity=    2.581632653     if item_num==   12      & study==3
+(1,158 real changes made)
+
+.                                 
+.                                 
+. replace politic =       4.05    if item_num==   1       & study==4
+(1,248 real changes made)
+
+. replace politic =       4.36    if item_num==   2       & study==4
+(1,248 real changes made)
+
+. replace politic =       3.92    if item_num==   3       & study==4
+(1,248 real changes made)
+
+. replace politic =       4.25    if item_num==   4       & study==4
+(1,248 real changes made)
+
+. replace politic =       3.73    if item_num==   5       & study==4
+(1,248 real changes made)
+
+. replace politic =       3.99    if item_num==   6       & study==4
+(1,248 real changes made)
+
+. replace politic =       1.91    if item_num==   7       & study==4
+(1,248 real changes made)
+
+. replace politic =       2.15    if item_num==   8       & study==4
+(1,248 real changes made)
+
+. replace politic =       1.8     if item_num==   9       & study==4
+(1,248 real changes made)
+
+. replace politic =       1.67    if item_num==   10      & study==4
+(1,248 real changes made)
+
+. replace politic =       2.08    if item_num==   11      & study==4
+(1,248 real changes made)
+
+. replace politic =       2.22    if item_num==   12      & study==4
+(1,248 real changes made)
+
+. replace politic =       4.11    if item_num==   13      & study==4
+(1,248 real changes made)
+
+. replace politic =       4.1     if item_num==   14      & study==4
+(1,248 real changes made)
+
+. replace politic =       4.14    if item_num==   15      & study==4
+(1,248 real changes made)
+
+. replace politic =       3.76    if item_num==   16      & study==4
+(1,248 real changes made)
+
+. replace politic =       4.15    if item_num==   17      & study==4
+(1,248 real changes made)
+
+. replace politic =       3.98    if item_num==   18      & study==4
+(1,248 real changes made)
+
+. replace politic =       1.88    if item_num==   19      & study==4
+(1,248 real changes made)
+
+. replace politic =       1.92    if item_num==   20      & study==4
+(1,248 real changes made)
+
+. replace politic =       1.93    if item_num==   21      & study==4
+(1,248 real changes made)
+
+. replace politic =       1.95    if item_num==   22      & study==4
+(1,248 real changes made)
+
+. replace politic =       2.07    if item_num==   23      & study==4
+(1,248 real changes made)
+
+. replace politic =       2.02    if item_num==   24      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    1.61    if item_num==   1       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    3.06    if item_num==   2       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    2.25    if item_num==   3       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    3.68    if item_num==   4       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    2.7     if item_num==   5       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    3.65    if item_num==   6       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    3.29    if item_num==   7       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    2.72    if item_num==   8       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    2.68    if item_num==   9       & study==4
+(1,248 real changes made)
+
+. replace likelihood =    4.37    if item_num==   10      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    2.67    if item_num==   11      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    2.28    if item_num==   12      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    4.41    if item_num==   13      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    4.46    if item_num==   14      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    4.29    if item_num==   15      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    5.07    if item_num==   16      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    5.07    if item_num==   17      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    5.18    if item_num==   18      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    5.18    if item_num==   19      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    5.24    if item_num==   20      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    5.16    if item_num==   21      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    3.63    if item_num==   22      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    4.98    if item_num==   23      & study==4
+(1,248 real changes made)
+
+. replace likelihood =    4.66    if item_num==   24      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.89    if item_num==   1       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.76    if item_num==   2       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.94    if item_num==   3       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.86    if item_num==   4       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.9     if item_num==   5       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.64    if item_num==   6       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.83    if item_num==   7       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.93    if item_num==   8       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.86    if item_num==   9       & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.85    if item_num==   10      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.89    if item_num==   11      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.93    if item_num==   12      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.87    if item_num==   13      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.78    if item_num==   14      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.83    if item_num==   15      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.64    if item_num==   16      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.19    if item_num==   17      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.26    if item_num==   18      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.79    if item_num==   19      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.41    if item_num==   20      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.65    if item_num==   21      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.75    if item_num==   22      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.56    if item_num==   23      & study==4
+(1,248 real changes made)
+
+. replace familiarity=    2.66    if item_num==   24      & study==4
+(1,248 real changes made)
+
+. gen funny=.                             
+(57,744 missing values generated)
+
+. replace funny=  1.86    if item_num==   1       & study==4
+(1,248 real changes made)
+
+. replace funny=  1.98    if item_num==   2       & study==4
+(1,248 real changes made)
+
+. replace funny=  2.13    if item_num==   3       & study==4
+(1,248 real changes made)
+
+. replace funny=  2.76    if item_num==   4       & study==4
+(1,248 real changes made)
+
+. replace funny=  2.83    if item_num==   5       & study==4
+(1,248 real changes made)
+
+. replace funny=  2.68    if item_num==   6       & study==4
+(1,248 real changes made)
+
+. replace funny=  2.28    if item_num==   7       & study==4
+(1,248 real changes made)
+
+. replace funny=  1.99    if item_num==   8       & study==4
+(1,248 real changes made)
+
+. replace funny=  2.14    if item_num==   9       & study==4
+(1,248 real changes made)
+
+. replace funny=  2.37    if item_num==   10      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.55    if item_num==   11      & study==4
+(1,248 real changes made)
+
+. replace funny=  4.77    if item_num==   12      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.82    if item_num==   13      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.36    if item_num==   14      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.38    if item_num==   15      & study==4
+(1,248 real changes made)
+
+. replace funny=  2.86    if item_num==   16      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.28    if item_num==   17      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.07    if item_num==   18      & study==4
+(1,248 real changes made)
+
+. replace funny=  2.71    if item_num==   19      & study==4
+(1,248 real changes made)
+
+. replace funny=  2.9     if item_num==   20      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.11    if item_num==   21      & study==4
+(1,248 real changes made)
+
+. replace funny=  3.22    if item_num==   22      & study==4
+(1,248 real changes made)
+
+. replace funny=  2.79    if item_num==   23      & study==4
+(1,248 real changes made)
+
+. replace funny=  2.83    if item_num==   24      & study==4
+(1,248 real changes made)
+
+. 
+. 
+. 
+. gen funnyDR=.
+(57,744 missing values generated)
+
+. replace funnyDR=2.71910112359551 if demrep==1 & item_num==1 & study==4
+(842 real changes made)
+
+. replace funnyDR=1.56179775280899 if demrep==1 & item_num==2 & study==4
+(842 real changes made)
+
+. replace funnyDR=2 if demrep==1 & item_num==3 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.55056179775281 if demrep==1 & item_num==4 & study==4
+(842 real changes made)
+
+. replace funnyDR=1.87640449438202 if demrep==1 & item_num==5 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.70786516853933 if demrep==1 & item_num==6 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.71910112359551 if demrep==1 & item_num==7 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.57954545454545 if demrep==1 & item_num==8 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.71910112359551 if demrep==1 & item_num==9 & study==4
+(842 real changes made)
+
+. replace funnyDR=1.98876404494382 if demrep==1 & item_num==10 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.04494382022472 if demrep==1 & item_num==11 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.60674157303371 if demrep==1 & item_num==12 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.65151515151515 if demrep==1 & item_num==13 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.56060606060606 if demrep==1 & item_num==14 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.06060606060606 if demrep==1 & item_num==15 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.90909090909091 if demrep==1 & item_num==16 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.3030303030303 if demrep==1 & item_num==17 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.31818181818182 if demrep==1 & item_num==18 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.54545454545454 if demrep==1 & item_num==19 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.93939393939394 if demrep==1 & item_num==20 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.93939393939394 if demrep==1 & item_num==21 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.24242424242424 if demrep==1 & item_num==22 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.8030303030303 if demrep==1 & item_num==23 & study==4
+(842 real changes made)
+
+. replace funnyDR=2.51515151515152 if demrep==1 & item_num==24 & study==4
+(842 real changes made)
+
+. replace funnyDR=3.04545454545454 if demrep==2 & item_num==1 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.45454545454546 if demrep==2 & item_num==2 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.38636363636364 if demrep==2 & item_num==3 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.18181818181818 if demrep==2 & item_num==4 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.2093023255814 if demrep==2 & item_num==5 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.72727272727273 if demrep==2 & item_num==6 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.86046511627907 if demrep==2 & item_num==7 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.59090909090909 if demrep==2 & item_num==8 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.97727272727273 if demrep==2 & item_num==9 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.43181818181818 if demrep==2 & item_num==10 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.76744186046512 if demrep==2 & item_num==11 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.59090909090909 if demrep==2 & item_num==12 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.11428571428571 if demrep==2 & item_num==13 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.14285714285714 if demrep==2 & item_num==14 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.08695652173913 if demrep==2 & item_num==15 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.72857142857143 if demrep==2 & item_num==16 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.41428571428571 if demrep==2 & item_num==17 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.24285714285714 if demrep==2 & item_num==18 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.9 if demrep==2 & item_num==19 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.85714285714286 if demrep==2 & item_num==20 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.27142857142857 if demrep==2 & item_num==21 & study==4
+(400 real changes made)
+
+. replace funnyDR=3.20289855072464 if demrep==2 & item_num==22 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.77142857142857 if demrep==2 & item_num==23 & study==4
+(400 real changes made)
+
+. replace funnyDR=2.9 if demrep==2 & item_num==24 & study==4
+(400 real changes made)
+
+. 
+. gen plausible=-99
+
+. 
+. gen plausibleDR=.
+(57,744 missing values generated)
+
+. replace plausibleDR=1.97752808988764 if demrep==1 & item_num==1 & study==4
+(842 real changes made)
+
+. replace plausibleDR=1.51685393258427 if demrep==1 & item_num==2 & study==4
+(842 real changes made)
+
+. replace plausibleDR=2.44943820224719 if demrep==1 & item_num==3 & study==4
+(842 real changes made)
+
+. replace plausibleDR=3.57303370786517 if demrep==1 & item_num==4 & study==4
+(842 real changes made)
+
+. replace plausibleDR=3.07865168539326 if demrep==1 & item_num==5 & study==4
+(842 real changes made)
+
+. replace plausibleDR=1.49438202247191 if demrep==1 & item_num==6 & study==4
+(842 real changes made)
+
+. replace plausibleDR=1.59550561797753 if demrep==1 & item_num==7 & study==4
+(842 real changes made)
+
+. replace plausibleDR=1.94318181818182 if demrep==1 & item_num==8 & study==4
+(842 real changes made)
+
+. replace plausibleDR=2.34090909090909 if demrep==1 & item_num==9 & study==4
+(842 real changes made)
+
+. replace plausibleDR=3.59090909090909 if demrep==1 & item_num==10 & study==4
+(842 real changes made)
+
+. replace plausibleDR=3.74157303370787 if demrep==1 & item_num==11 & study==4
+(842 real changes made)
+
+. replace plausibleDR=2.66292134831461 if demrep==1 & item_num==12 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.57575757575758 if demrep==1 & item_num==13 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.40909090909091 if demrep==1 & item_num==14 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.33846153846154 if demrep==1 & item_num==15 & study==4
+(842 real changes made)
+
+. replace plausibleDR=4.6969696969697 if demrep==1 & item_num==16 & study==4
+(842 real changes made)
+
+. replace plausibleDR=4.33333333333333 if demrep==1 & item_num==17 & study==4
+(842 real changes made)
+
+. replace plausibleDR=4.59090909090909 if demrep==1 & item_num==18 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.5 if demrep==1 & item_num==19 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.63636363636364 if demrep==1 & item_num==20 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.78461538461538 if demrep==1 & item_num==21 & study==4
+(842 real changes made)
+
+. replace plausibleDR=4.72727272727273 if demrep==1 & item_num==22 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.25757575757576 if demrep==1 & item_num==23 & study==4
+(842 real changes made)
+
+. replace plausibleDR=5.16923076923077 if demrep==1 & item_num==24 & study==4
+(842 real changes made)
+
+. replace plausibleDR=2.76744186046512 if demrep==2 & item_num==1 & study==4
+(400 real changes made)
+
+. replace plausibleDR=1.52272727272727 if demrep==2 & item_num==2 & study==4
+(400 real changes made)
+
+. replace plausibleDR=2.52272727272727 if demrep==2 & item_num==3 & study==4
+(400 real changes made)
+
+. replace plausibleDR=3.6046511627907 if demrep==2 & item_num==4 & study==4
+(400 real changes made)
+
+. replace plausibleDR=3.61363636363636 if demrep==2 & item_num==5 & study==4
+(400 real changes made)
+
+. replace plausibleDR=2.02272727272727 if demrep==2 & item_num==6 & study==4
+(400 real changes made)
+
+. replace plausibleDR=1.45454545454545 if demrep==2 & item_num==7 & study==4
+(400 real changes made)
+
+. replace plausibleDR=1.70454545454545 if demrep==2 & item_num==8 & study==4
+(400 real changes made)
+
+. replace plausibleDR=1.45454545454545 if demrep==2 & item_num==9 & study==4
+(400 real changes made)
+
+. replace plausibleDR=2.27272727272727 if demrep==2 & item_num==10 & study==4
+(400 real changes made)
+
+. replace plausibleDR=2.52272727272727 if demrep==2 & item_num==11 & study==4
+(400 real changes made)
+
+. replace plausibleDR=2 if demrep==2 & item_num==12 & study==4
+(400 real changes made)
+
+. replace plausibleDR=5.6231884057971 if demrep==2 & item_num==13 & study==4
+(400 real changes made)
+
+. replace plausibleDR=4.98571428571429 if demrep==2 & item_num==14 & study==4
+(400 real changes made)
+
+. replace plausibleDR=5.71428571428572 if demrep==2 & item_num==15 & study==4
+(400 real changes made)
+
+. replace plausibleDR=4.88571428571429 if demrep==2 & item_num==16 & study==4
+(400 real changes made)
+
+. replace plausibleDR=4.91428571428571 if demrep==2 & item_num==17 & study==4
+(400 real changes made)
+
+. replace plausibleDR=6.04285714285714 if demrep==2 & item_num==18 & study==4
+(400 real changes made)
+
+. replace plausibleDR=4.92857142857143 if demrep==2 & item_num==19 & study==4
+(400 real changes made)
+
+. replace plausibleDR=5.34285714285714 if demrep==2 & item_num==20 & study==4
+(400 real changes made)
+
+. replace plausibleDR=4.5 if demrep==2 & item_num==21 & study==4
+(400 real changes made)
+
+. replace plausibleDR=3.3768115942029 if demrep==2 & item_num==22 & study==4
+(400 real changes made)
+
+. replace plausibleDR=4.8 if demrep==2 & item_num==23 & study==4
+(400 real changes made)
+
+. replace plausibleDR=4.78571428571429 if demrep==2 & item_num==24 & study==4
+(400 real changes made)
+
+. 
+. gen concordant=-99
+
+. 
+. gen concordantDR=.
+(57,744 missing values generated)
+
+. replace concordantDR=2.26966292134831 if demrep==1 & item_num==1 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.90909090909091 if demrep==1 & item_num==2 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.77528089887641 if demrep==1 & item_num==3 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.84090909090909 if demrep==1 & item_num==4 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.67045454545455 if demrep==1 & item_num==5 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.55056179775281 if demrep==1 & item_num==6 & study==4
+(842 real changes made)
+
+. replace concordantDR=4.34090909090909 if demrep==1 & item_num==7 & study==4
+(842 real changes made)
+
+. replace concordantDR=4.20224719101124 if demrep==1 & item_num==8 & study==4
+(842 real changes made)
+
+. replace concordantDR=3.97752808988764 if demrep==1 & item_num==9 & study==4
+(842 real changes made)
+
+. replace concordantDR=4.02247191011236 if demrep==1 & item_num==10 & study==4
+(842 real changes made)
+
+. replace concordantDR=3.9438202247191 if demrep==1 & item_num==11 & study==4
+(842 real changes made)
+
+. replace concordantDR=3.79775280898876 if demrep==1 & item_num==12 & study==4
+(842 real changes made)
+
+. replace concordantDR=2.75757575757576 if demrep==1 & item_num==13 & study==4
+(842 real changes made)
+
+. replace concordantDR=2.13636363636364 if demrep==1 & item_num==14 & study==4
+(842 real changes made)
+
+. replace concordantDR=2 if demrep==1 & item_num==15 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.78787878787879 if demrep==1 & item_num==16 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.68181818181818 if demrep==1 & item_num==17 & study==4
+(842 real changes made)
+
+. replace concordantDR=1.6969696969697 if demrep==1 & item_num==18 & study==4
+(842 real changes made)
+
+. replace concordantDR=4.07575757575758 if demrep==1 & item_num==19 & study==4
+(842 real changes made)
+
+. replace concordantDR=4.22727272727273 if demrep==1 & item_num==20 & study==4
+(842 real changes made)
+
+. replace concordantDR=4.16923076923077 if demrep==1 & item_num==21 & study==4
+(842 real changes made)
+
+. replace concordantDR=4.06060606060606 if demrep==1 & item_num==22 & study==4
+(842 real changes made)
+
+. replace concordantDR=3.92424242424242 if demrep==1 & item_num==23 & study==4
+(842 real changes made)
+
+. replace concordantDR=3.92424242424242 if demrep==1 & item_num==24 & study==4
+(842 real changes made)
+
+. replace concordantDR=3.52272727272727 if demrep==2 & item_num==1 & study==4
+(400 real changes made)
+
+. replace concordantDR=3.88636363636364 if demrep==2 & item_num==2 & study==4
+(400 real changes made)
+
+. replace concordantDR=3.68181818181818 if demrep==2 & item_num==3 & study==4
+(400 real changes made)
+
+. replace concordantDR=3.81818181818182 if demrep==2 & item_num==4 & study==4
+(400 real changes made)
+
+. replace concordantDR=4.15909090909091 if demrep==2 & item_num==5 & study==4
+(400 real changes made)
+
+. replace concordantDR=3.97727272727273 if demrep==2 & item_num==6 & study==4
+(400 real changes made)
+
+. replace concordantDR=1.65909090909091 if demrep==2 & item_num==7 & study==4
+(400 real changes made)
+
+. replace concordantDR=1.65909090909091 if demrep==2 & item_num==8 & study==4
+(400 real changes made)
+
+. replace concordantDR=1.88636363636364 if demrep==2 & item_num==9 & study==4
+(400 real changes made)
+
+. replace concordantDR=2.15909090909091 if demrep==2 & item_num==10 & study==4
+(400 real changes made)
+
+. replace concordantDR=2.20930232558139 if demrep==2 & item_num==11 & study==4
+(400 real changes made)
+
+. replace concordantDR=2 if demrep==2 & item_num==12 & study==4
+(400 real changes made)
+
+. replace concordantDR=3.57142857142857 if demrep==2 & item_num==13 & study==4
+(400 real changes made)
+
+. replace concordantDR=3.68571428571429 if demrep==2 & item_num==14 & study==4
+(400 real changes made)
+
+. replace concordantDR=3.9 if demrep==2 & item_num==15 & study==4
+(400 real changes made)
+
+. replace concordantDR=4.1 if demrep==2 & item_num==16 & study==4
+(400 real changes made)
+
+. replace concordantDR=4.05714285714286 if demrep==2 & item_num==17 & study==4
+(400 real changes made)
+
+. replace concordantDR=4.34285714285714 if demrep==2 & item_num==18 & study==4
+(400 real changes made)
+
+. replace concordantDR=1.87142857142857 if demrep==2 & item_num==19 & study==4
+(400 real changes made)
+
+. replace concordantDR=2.01428571428572 if demrep==2 & item_num==20 & study==4
+(400 real changes made)
+
+. replace concordantDR=2.05797101449275 if demrep==2 & item_num==21 & study==4
+(400 real changes made)
+
+. replace concordantDR=1.98571428571429 if demrep==2 & item_num==22 & study==4
+(400 real changes made)
+
+. replace concordantDR=2.04285714285714 if demrep==2 & item_num==23 & study==4
+(400 real changes made)
+
+. replace concordantDR=2.21428571428571 if demrep==2 & item_num==24 & study==4
+(400 real changes made)
+
+. 
+. gen familiar=-99
+
+. 
+. gen familiarDR=.
+(57,744 missing values generated)
+
+. replace familiarDR=0.897727272727272 if demrep==1 & item_num==1 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.921348314606741 if demrep==1 & item_num==2 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.898876404494382 if demrep==1 & item_num==3 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.820224719101124 if demrep==1 & item_num==4 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.842696629213483 if demrep==1 & item_num==5 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.98876404494382 if demrep==1 & item_num==6 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.943181818181818 if demrep==1 & item_num==7 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.943820224719101 if demrep==1 & item_num==8 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.955056179775281 if demrep==1 & item_num==9 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.853932584269663 if demrep==1 & item_num==10 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.786516853932584 if demrep==1 & item_num==11 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.943820224719101 if demrep==1 & item_num==12 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.666666666666667 if demrep==1 & item_num==13 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.646153846153846 if demrep==1 & item_num==14 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.409090909090909 if demrep==1 & item_num==15 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.742424242424242 if demrep==1 & item_num==16 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.924242424242424 if demrep==1 & item_num==17 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.545454545454545 if demrep==1 & item_num==18 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.409090909090909 if demrep==1 & item_num==19 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.484848484848485 if demrep==1 & item_num==20 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.553846153846154 if demrep==1 & item_num==21 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.727272727272727 if demrep==1 & item_num==22 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.569230769230769 if demrep==1 & item_num==23 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.712121212121212 if demrep==1 & item_num==24 & study==4
+(842 real changes made)
+
+. replace familiarDR=0.840909090909091 if demrep==2 & item_num==1 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.931818181818181 if demrep==2 & item_num==2 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.909090909090909 if demrep==2 & item_num==3 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.818181818181818 if demrep==2 & item_num==4 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.720930232558139 if demrep==2 & item_num==5 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.840909090909091 if demrep==2 & item_num==6 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.863636363636364 if demrep==2 & item_num==7 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.863636363636364 if demrep==2 & item_num==8 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.886363636363636 if demrep==2 & item_num==9 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.840909090909091 if demrep==2 & item_num==10 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.837209302325581 if demrep==2 & item_num==11 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.886363636363636 if demrep==2 & item_num==12 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.514285714285714 if demrep==2 & item_num==13 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.671428571428572 if demrep==2 & item_num==14 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.371428571428571 if demrep==2 & item_num==15 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.785714285714286 if demrep==2 & item_num==16 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.642857142857143 if demrep==2 & item_num==17 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.428571428571429 if demrep==2 & item_num==18 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.442857142857143 if demrep==2 & item_num==19 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.485714285714286 if demrep==2 & item_num==20 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.742857142857143 if demrep==2 & item_num==21 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.826086956521739 if demrep==2 & item_num==22 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.714285714285714 if demrep==2 & item_num==23 & study==4
+(400 real changes made)
+
+. replace familiarDR=0.742857142857143 if demrep==2 & item_num==24 & study==4
+(400 real changes made)
+
+. 
+. 
+. replace item_num=item_num+24 if study==3
+(27,792 real changes made)
+
+. 
+. gen concordance =  politic
+
+. replace concordance =  6-politic if demrep==1
+(38,208 real changes made)
+
+. gen novelty = 6 - familiarity
+
+. ///////////////////////////
+> 
+. 
+. 
+. 
+. 
+. ///////////////////////
+> // ITEM LEVEL ANALYSIS - FIGURE 3a,b
+. preserve
+
+. keep if socialmedia_chk==1
+(21,576 observations deleted)
+
+. collapse (mean) sm likelihood study, by(item_num condition)
+
+. reshape wide sm, i(item_num) j(condition)
+(note: j = 0 1)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       96   ->      48
+Number of variables                   5   ->       5
+j variable (2 values)         condition   ->   (dropped)
+xij variables:
+                                     sm   ->   sm0 sm1
+-----------------------------------------------------------------------------
+
+. gen treatmentEffect=sm1-sm0
+
+. scatter treatmentEffect likelihood if study==3, name(s3)
+
+. scatter treatmentEffect likelihood if study==4, name(s4)
+
+. bysort study: pwcorr treatmentEffect likelihood, sig
+
+----------------------------------------------------------------------------------------------
+-> study = 3
+
+             | treatm~t likeli~d
+-------------+------------------
+treatmentE~t |   1.0000 
+             |
+             |
+  likelihood |   0.7107   1.0000 
+             |   0.0001
+             |
+
+----------------------------------------------------------------------------------------------
+-> study = 4
+
+             | treatm~t likeli~d
+-------------+------------------
+treatmentE~t |   1.0000 
+             |
+             |
+  likelihood |   0.6739   1.0000 
+             |   0.0003
+             |
+
+. restore
+
+. //////////////
+> 
+. 
+. 
+. 
+. //////
+> // EXPORT DATA FOR UTILITY MODEL FITTING IN MATLAB 
+. preserve
+
+. keep if socialmedia_chk==1
+(21,576 observations deleted)
+
+. keep if study ==4
+(17,448 observations deleted)
+
+. drop if demrep==.
+(24 observations deleted)
+
+. egen tmp=count(sm), by(id)
+
+. drop if tmp<24
+(624 observations deleted)
+
+. drop tmp
+
+. replace condition=(condition*2)+1
+(18,072 real changes made)
+
+. table condition
+
+----------------------
+Condition |      Freq.
+----------+-----------
+Treatment |      9,168
+        3 |      8,904
+----------------------
+
+. keep real id item_num condition sm demrep funny funnyDR plausible plausibleDR familiarity fa
+> miliarDR concordance concordantDR
+
+.  export delimited using "dataS4_for_matlab_fit_bootstrap_long.csv", nolabel replace
+file dataS4_for_matlab_fit_bootstrap_long.csv saved
+
+.  restore
+
+. ///////////////////////
+
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_3_and_
+> 4_Stata_Results.txt
+  log type:  text
+ closed on:  19 Apr 2026, 20:30:25
+----------------------------------------------------------------------------------------------

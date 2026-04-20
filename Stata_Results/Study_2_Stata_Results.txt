@@ -1,0 +1,180 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_2_Stat
+> a_Results.txt
+  log type:  text
+ opened on:  19 Apr 2026, 20:22:59
+
+. do "/var/folders/42/0shmvk2961vc3kyvy9tp02qw0000gn/T//SD85366.000000"
+
+. clear * 
+
+. insheet using "Study_2_data.csv"
+(84 vars, 402 obs)
+
+. 
+. // For Figure 1c
+. tabulate imp_surprising
+
+imp_surpris |
+        ing |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          1 |         78       19.55       19.55
+          2 |         78       19.55       39.10
+          3 |        145       36.34       75.44
+          4 |         57       14.29       89.72
+          5 |         41       10.28      100.00
+------------+-----------------------------------
+      Total |        399      100.00
+
+. tabulate imp_politics
+
+imp_politic |
+          s |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          1 |         62       15.46       15.46
+          2 |         60       14.96       30.42
+          3 |        114       28.43       58.85
+          4 |         81       20.20       79.05
+          5 |         84       20.95      100.00
+------------+-----------------------------------
+      Total |        401      100.00
+
+. tabulate imp_funny
+
+  imp_funny |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          1 |         45       11.34       11.34
+          2 |         61       15.37       26.70
+          3 |        112       28.21       54.91
+          4 |         90       22.67       77.58
+          5 |         89       22.42      100.00
+------------+-----------------------------------
+      Total |        397      100.00
+
+. tabulate imp_intersting
+
+imp_interst |
+        ing |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          1 |         18        4.53        4.53
+          2 |         16        4.03        8.56
+          3 |         84       21.16       29.72
+          4 |        154       38.79       68.51
+          5 |        125       31.49      100.00
+------------+-----------------------------------
+      Total |        397      100.00
+
+. tabulate imp_accurate
+
+imp_accurat |
+          e |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          1 |         21        5.25        5.25
+          2 |         11        2.75        8.00
+          3 |         43       10.75       18.75
+          4 |         96       24.00       42.75
+          5 |        229       57.25      100.00
+------------+-----------------------------------
+      Total |        400      100.00
+
+. 
+. // accuracy more important than other categories
+. ttest imp_accurate ==imp_surprising
+
+Paired t test
+------------------------------------------------------------------------------
+Variable |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+imp_ac~e |     398    4.248744    .0550234    1.097713     4.14057    4.356917
+imp_su~g |     398    2.756281    .0607619    1.212196    2.636826    2.875737
+---------+--------------------------------------------------------------------
+    diff |     398    1.492462    .0800095    1.596184    1.335167    1.649757
+------------------------------------------------------------------------------
+     mean(diff) = mean(imp_accurate - imp_surprising)             t =  18.6536
+ Ho: mean(diff) = 0                              degrees of freedom =      397
+
+ Ha: mean(diff) < 0           Ha: mean(diff) != 0           Ha: mean(diff) > 0
+ Pr(T < t) = 1.0000         Pr(|T| > |t|) = 0.0000          Pr(T > t) = 0.0000
+
+. ttest imp_accurate ==imp_intersting
+
+Paired t test
+------------------------------------------------------------------------------
+Variable |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+imp_ac~e |     396    4.247475    .0552654    1.099767    4.138824    4.356126
+imp_in~g |     396    3.886364    .0524241    1.043226    3.783299    3.989429
+---------+--------------------------------------------------------------------
+    diff |     396    .3611111    .0568401    1.131104    .2493642     .472858
+------------------------------------------------------------------------------
+     mean(diff) = mean(imp_accurate - imp_intersting)             t =   6.3531
+ Ho: mean(diff) = 0                              degrees of freedom =      395
+
+ Ha: mean(diff) < 0           Ha: mean(diff) != 0           Ha: mean(diff) > 0
+ Pr(T < t) = 1.0000         Pr(|T| > |t|) = 0.0000          Pr(T > t) = 0.0000
+
+. ttest imp_accurate ==imp_politics
+
+Paired t test
+------------------------------------------------------------------------------
+Variable |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+imp_ac~e |     400      4.2525    .0548121    1.096243    4.144743    4.360257
+imp_po~s |     400        3.16    .0668744    1.337487     3.02853     3.29147
+---------+--------------------------------------------------------------------
+    diff |     400      1.0925    .0789013    1.578027    .9373857    1.247614
+------------------------------------------------------------------------------
+     mean(diff) = mean(imp_accurate - imp_politics)               t =  13.8464
+ Ho: mean(diff) = 0                              degrees of freedom =      399
+
+ Ha: mean(diff) < 0           Ha: mean(diff) != 0           Ha: mean(diff) > 0
+ Pr(T < t) = 1.0000         Pr(|T| > |t|) = 0.0000          Pr(T > t) = 0.0000
+
+. ttest imp_accurate ==imp_funny
+
+Paired t test
+------------------------------------------------------------------------------
+Variable |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+imp_ac~e |     397    4.246851    .0551295    1.098448    4.138468    4.355234
+imp_fu~y |     397     3.29471    .0644249    1.283657    3.168053    3.421368
+---------+--------------------------------------------------------------------
+    diff |     397    .9521411    .0818057    1.629968    .7913132    1.112969
+------------------------------------------------------------------------------
+     mean(diff) = mean(imp_accurate - imp_funny)                  t =  11.6391
+ Ho: mean(diff) = 0                              degrees of freedom =      396
+
+ Ha: mean(diff) < 0           Ha: mean(diff) != 0           Ha: mean(diff) > 0
+ Pr(T < t) = 1.0000         Pr(|T| > |t|) = 0.0000          Pr(T > t) = 0.0000
+
+. 
+. // side-note (not discussed in the paper): no significant difference in importance of accura
+> cy based on partisanship or ideology
+. pwcorr imp_accurate social_conserv econ_conserv political_preference, sig
+
+             | imp_ac~e social~v econ_c~v politi~e
+-------------+------------------------------------
+imp_accurate |   1.0000 
+             |
+             |
+social_con~v |  -0.0364   1.0000 
+             |   0.4682
+             |
+econ_conserv |   0.0699   0.7929   1.0000 
+             |   0.1630   0.0000
+             |
+political_~e |   0.0111   0.6785   0.6278   1.0000 
+             |   0.8257   0.0000   0.0000
+             |
+
+. 
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_2_Stat
+> a_Results.txt
+  log type:  text
+ closed on:  19 Apr 2026, 20:23:08
+----------------------------------------------------------------------------------------------

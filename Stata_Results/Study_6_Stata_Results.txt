@@ -1,0 +1,2075 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_6_Stat
+> a_Results.txt
+  log type:  text
+ opened on:  19 Apr 2026, 20:10:14
+
+. do "/var/folders/42/0shmvk2961vc3kyvy9tp02qw0000gn/T//SD84311.000000"
+
+. label drop _all
+
+. insheet using "Study_6_b2_data.csv", clear
+(506 vars, 506 obs)
+
+. destring *, replace
+condition already numeric; no replace
+fakesm has all characters numeric; replaced as double
+(1 missing value generated)
+realsm has all characters numeric; replaced as double
+(1 missing value generated)
+fakesm_c has all characters numeric; replaced as double
+(1 missing value generated)
+realsm_c has all characters numeric; replaced as double
+(1 missing value generated)
+fakesm_l has all characters numeric; replaced as double
+(1 missing value generated)
+realsm_l has all characters numeric; replaced as double
+(1 missing value generated)
+fakesm_pc has all characters numeric; replaced as double
+(1 missing value generated)
+fakesm_npc has all characters numeric; replaced as double
+(1 missing value generated)
+realsm_pc has all characters numeric; replaced as double
+(1 missing value generated)
+realsm_npc has all characters numeric; replaced as double
+(1 missing value generated)
+crt_acc already numeric; no replace
+crt_rand already numeric; no replace
+crt_thomson already numeric; no replace
+responseid contains nonnumeric characters; no replace
+responseset contains nonnumeric characters; no replace
+name contains nonnumeric characters; no replace
+externaldatareference has all characters numeric; replaced as byte
+(506 missing values generated)
+email has all characters numeric; replaced as byte
+(506 missing values generated)
+ipaddress contains nonnumeric characters; no replace
+status already numeric; no replace
+startdate contains nonnumeric characters; no replace
+enddate contains nonnumeric characters; no replace
+finished already numeric; no replace
+confirmcode already numeric; no replace
+workerid contains nonnumeric characters; no replace
+idinst already numeric; no replace
+fb has all characters numeric; replaced as byte
+(1 missing value generated)
+term has all characters numeric; replaced as byte
+(506 missing values generated)
+inst_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake1_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake1_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake1_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake1_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake1_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake1_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake2_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake2_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake2_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake2_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake2_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake2_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake3_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake3_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake3_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake3_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake3_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake3_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake4_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake4_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake4_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake4_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake4_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake4_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake5_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake5_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake5_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake5_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake5_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake5_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake6_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake6_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake6_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake6_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake6_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake6_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake7_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake7_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake7_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake7_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake7_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake7_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake8_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake8_3 has all characters numeric; replaced as byte
+(255 missing values generated)
+fake8_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake8_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake8_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake8_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake9_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake9_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake9_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake9_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake9_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake9_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake10_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake10_3 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake10_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake10_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake10_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake10_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake11_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake11_3 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake11_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake11_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake11_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake11_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake12_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+fake12_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+fake12_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+fake12_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+fake12_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+fake12_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real1_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real1_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real2_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real2_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real2_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real2_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real2_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real2_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real3_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real3_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real3_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real3_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real3_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real3_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real4_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real4_3 has all characters numeric; replaced as byte
+(254 missing values generated)
+real4_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real4_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real4_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real4_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real5_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real5_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real5_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real5_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real5_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real5_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real6_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real6_3 has all characters numeric; replaced as byte
+(254 missing values generated)
+real6_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real6_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real6_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real6_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real7_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real7_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real7_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real7_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real7_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real7_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real8_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real8_3 has all characters numeric; replaced as byte
+(254 missing values generated)
+real8_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real8_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real8_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real8_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real9_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real9_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real9_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real9_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real9_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real9_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real10_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real10_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real10_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real10_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real10_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real10_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real11_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real11_3 has all characters numeric; replaced as byte
+(253 missing values generated)
+real11_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real11_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real11_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real11_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+real12_sm has all characters numeric; replaced as byte
+(253 missing values generated)
+real12_3 has all characters numeric; replaced as byte
+(254 missing values generated)
+real12_rt_1 has all characters numeric; replaced as double
+(253 missing values generated)
+real12_rt_2 has all characters numeric; replaced as double
+(253 missing values generated)
+real12_rt_3 has all characters numeric; replaced as double
+(253 missing values generated)
+real12_rt_4 has all characters numeric; replaced as byte
+(253 missing values generated)
+inst_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake1_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake1_2 has all characters numeric; replaced as byte
+(255 missing values generated)
+fake1_30 has all characters numeric; replaced as byte
+(255 missing values generated)
+fake1_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake1_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake1_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake1_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake2_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake2_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake2_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake2_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake2_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake2_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake2_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake3_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake3_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake3_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake3_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake3_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake3_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake3_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake4_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake4_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake4_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake4_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake4_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake4_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake4_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake5_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake5_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake5_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake5_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake5_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake5_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake5_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake6_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake6_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake6_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake6_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake6_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake6_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake6_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake7_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake7_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake7_30 has all characters numeric; replaced as byte
+(255 missing values generated)
+fake7_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake7_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake7_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake7_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake8_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake8_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake8_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake8_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake8_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake8_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake8_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake9_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake9_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake9_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake9_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake9_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake9_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake9_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake10_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake10_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake10_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake10_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake10_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake10_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake10_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake11_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake11_2 has all characters numeric; replaced as byte
+(256 missing values generated)
+fake11_30 has all characters numeric; replaced as byte
+(255 missing values generated)
+fake11_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake11_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake11_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake11_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake12_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+fake12_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake12_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+fake12_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+fake12_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+fake12_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+fake12_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real1_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real1_2 has all characters numeric; replaced as byte
+(256 missing values generated)
+real1_30 has all characters numeric; replaced as byte
+(255 missing values generated)
+real1_rt_1 has all characters numeric; replaced as double
+(254 missing values generated)
+real1_rt_2 has all characters numeric; replaced as double
+(254 missing values generated)
+real1_rt_3 has all characters numeric; replaced as double
+(254 missing values generated)
+real1_rt_4 has all characters numeric; replaced as byte
+(254 missing values generated)
+real2_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real2_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real2_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real2_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real2_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real2_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real2_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real3_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real3_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real3_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real3_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real3_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real3_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real3_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real4_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real4_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real4_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real4_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real4_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real4_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real4_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real5_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real5_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real5_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real5_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real5_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real5_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real5_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real6_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real6_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real6_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real6_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real6_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real6_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real6_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real7_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real7_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real7_30 has all characters numeric; replaced as byte
+(255 missing values generated)
+real7_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real7_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real7_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real7_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real8_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real8_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real8_30 has all characters numeric; replaced as byte
+(256 missing values generated)
+real8_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real8_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real8_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real8_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real9_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real9_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real9_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real9_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real9_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real9_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real9_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real10_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real10_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real10_30 has all characters numeric; replaced as byte
+(256 missing values generated)
+real10_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real10_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real10_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real10_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real11_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real11_2 has all characters numeric; replaced as byte
+(254 missing values generated)
+real11_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real11_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real11_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real11_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real11_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+real12_a_sm has all characters numeric; replaced as byte
+(254 missing values generated)
+real12_2 has all characters numeric; replaced as byte
+(255 missing values generated)
+real12_30 has all characters numeric; replaced as byte
+(254 missing values generated)
+real12_rt_10 has all characters numeric; replaced as double
+(254 missing values generated)
+real12_rt_20 has all characters numeric; replaced as double
+(254 missing values generated)
+real12_rt_30 has all characters numeric; replaced as double
+(254 missing values generated)
+real12_rt_40 has all characters numeric; replaced as byte
+(254 missing values generated)
+crt_inst already numeric; no replace
+crt1_1 already numeric; no replace
+crt1_1_rt_1 already numeric; no replace
+crt1_1_rt_2 already numeric; no replace
+crt1_1_rt_3 already numeric; no replace
+crt1_1_rt_4 already numeric; no replace
+crt1_2 already numeric; no replace
+crt1_2_rt_1 already numeric; no replace
+crt1_2_rt_2 already numeric; no replace
+crt1_2_rt_3 already numeric; no replace
+crt1_2_rt_4 already numeric; no replace
+crt1_3 already numeric; no replace
+crt1_3_rt_1 already numeric; no replace
+crt1_3_rt_2 already numeric; no replace
+crt1_3_rt_3 already numeric; no replace
+crt1_3_rt_4 already numeric; no replace
+crt3_1 already numeric; no replace
+crt3_2 already numeric; no replace
+crt3_3 has all characters numeric; replaced as byte
+(1 missing value generated)
+crt3_4 has all characters numeric; replaced as int
+(1 missing value generated)
+crt_chk already numeric; no replace
+age already numeric; no replace
+sex has all characters numeric; replaced as byte
+(3 missing values generated)
+education has all characters numeric; replaced as byte
+(1 missing value generated)
+english has all characters numeric; replaced as byte
+(5 missing values generated)
+party has all characters numeric; replaced as byte
+(2 missing values generated)
+party_text contains nonnumeric characters; no replace
+social_conserv has all characters numeric; replaced as byte
+(2 missing values generated)
+economic_conserv already numeric; no replace
+potus2016 already numeric; no replace
+clintontrump already numeric; no replace
+demrep already numeric; no replace
+media1 has all characters numeric; replaced as byte
+(2 missing values generated)
+media2 has all characters numeric; replaced as byte
+(3 missing values generated)
+media3_1 has all characters numeric; replaced as byte
+(1 missing value generated)
+media3_2 has all characters numeric; replaced as byte
+(2 missing values generated)
+media3_3 has all characters numeric; replaced as byte
+(1 missing value generated)
+media3_11 has all characters numeric; replaced as byte
+(1 missing value generated)
+fb_f has all characters numeric; replaced as byte
+(1 missing value generated)
+theism1 already numeric; no replace
+theism2_1 has all characters numeric; replaced as byte
+(166 missing values generated)
+theism2_2 has all characters numeric; replaced as byte
+(406 missing values generated)
+theism2_3 has all characters numeric; replaced as byte
+(366 missing values generated)
+theism2_4 has all characters numeric; replaced as byte
+(391 missing values generated)
+socialmedia_chk already numeric; no replace
+accimp has all characters numeric; replaced as byte
+(1 missing value generated)
+random has all characters numeric; replaced as byte
+(1 missing value generated)
+google has all characters numeric; replaced as byte
+(1 missing value generated)
+zipcode has all characters numeric; replaced as long
+(2 missing values generated)
+comments contains nonnumeric characters; no replace
+length contains nonnumeric characters; no replace
+do_br_fl_158 contains nonnumeric characters; no replace
+do_br_fl_167 contains nonnumeric characters; no replace
+do_br_fl_679 contains nonnumeric characters; no replace
+do_bl_crt_thompson contains nonnumeric characters; no replace
+do_q_media2 contains nonnumeric characters; no replace
+do_q_media1 contains nonnumeric characters; no replace
+locationlatitude already numeric; no replace
+locationlongitude already numeric; no replace
+locationaccuracy already numeric; no replace
+crt_acc_1 already numeric; no replace
+crt_acc_2 already numeric; no replace
+crt_acc_3 already numeric; no replace
+crt_acc_4 already numeric; no replace
+crt_acc_5 already numeric; no replace
+crt_acc_6 has all characters numeric; replaced as byte
+(1 missing value generated)
+crt_acc_7 has all characters numeric; replaced as byte
+(1 missing value generated)
+politicfake1 already numeric; no replace
+politicfake2 already numeric; no replace
+politicfake3 already numeric; no replace
+politicfake4 already numeric; no replace
+politicfake5 already numeric; no replace
+politicfake6 already numeric; no replace
+politicfake7 already numeric; no replace
+politicfake8 already numeric; no replace
+politicfake9 already numeric; no replace
+politicfake10 already numeric; no replace
+politicfake11 already numeric; no replace
+politicfake12 already numeric; no replace
+politicreal1 already numeric; no replace
+politicreal2 already numeric; no replace
+politicreal3 already numeric; no replace
+politicreal4 already numeric; no replace
+politicreal5 already numeric; no replace
+politicreal6 already numeric; no replace
+politicreal7 already numeric; no replace
+politicreal8 already numeric; no replace
+politicreal9 already numeric; no replace
+politicreal10 already numeric; no replace
+politicreal11 already numeric; no replace
+politicreal12 already numeric; no replace
+likelihoodfake1 already numeric; no replace
+likelihoodfake2 already numeric; no replace
+likelihoodfake3 already numeric; no replace
+likelihoodfake4 already numeric; no replace
+likelihoodfake5 already numeric; no replace
+likelihoodfake6 already numeric; no replace
+likelihoodfake7 already numeric; no replace
+likelihoodfake8 already numeric; no replace
+likelihoodfake9 already numeric; no replace
+likelihoodfake10 already numeric; no replace
+likelihoodfake11 already numeric; no replace
+likelihoodfake12 already numeric; no replace
+likelihoodreal1 already numeric; no replace
+likelihoodreal2 already numeric; no replace
+likelihoodreal3 already numeric; no replace
+likelihoodreal4 already numeric; no replace
+likelihoodreal5 already numeric; no replace
+likelihoodreal6 already numeric; no replace
+likelihoodreal7 already numeric; no replace
+likelihoodreal8 already numeric; no replace
+likelihoodreal9 already numeric; no replace
+likelihoodreal10 already numeric; no replace
+likelihoodreal11 already numeric; no replace
+likelihoodreal12 already numeric; no replace
+familiarfake1 already numeric; no replace
+familiarfake2 already numeric; no replace
+familiarfake3 already numeric; no replace
+familiarfake4 already numeric; no replace
+familiarfake5 already numeric; no replace
+familiarfake6 already numeric; no replace
+familiarfake7 already numeric; no replace
+familiarfake8 already numeric; no replace
+familiarfake9 already numeric; no replace
+familiarfake10 already numeric; no replace
+familiarfake11 already numeric; no replace
+familiarfake12 already numeric; no replace
+familiarreal1 already numeric; no replace
+familiarreal2 already numeric; no replace
+familiarreal3 already numeric; no replace
+familiarreal4 already numeric; no replace
+familiarreal5 already numeric; no replace
+familiarreal6 already numeric; no replace
+familiarreal7 already numeric; no replace
+familiarreal8 already numeric; no replace
+familiarreal9 already numeric; no replace
+familiarreal10 already numeric; no replace
+familiarreal11 already numeric; no replace
+familiarreal12 already numeric; no replace
+familiarbinfake1 already numeric; no replace
+familiarbinfake2 already numeric; no replace
+familiarbinfake3 already numeric; no replace
+familiarbinfake4 already numeric; no replace
+familiarbinfake5 already numeric; no replace
+familiarbinfake6 already numeric; no replace
+familiarbinfake7 already numeric; no replace
+familiarbinfake8 already numeric; no replace
+familiarbinfake9 already numeric; no replace
+familiarbinfake10 already numeric; no replace
+familiarbinfake11 already numeric; no replace
+familiarbinfake12 already numeric; no replace
+familiarbinreal1 already numeric; no replace
+familiarbinreal2 already numeric; no replace
+familiarbinreal3 already numeric; no replace
+familiarbinreal4 already numeric; no replace
+familiarbinreal5 already numeric; no replace
+familiarbinreal6 already numeric; no replace
+familiarbinreal7 already numeric; no replace
+familiarbinreal8 already numeric; no replace
+familiarbinreal9 already numeric; no replace
+familiarbinreal10 already numeric; no replace
+familiarbinreal11 already numeric; no replace
+familiarbinreal12 already numeric; no replace
+
+. gen batch=2
+
+. save tmp, replace
+file tmp.dta saved
+
+. insheet using "Study_6_b1_data.csv", clear
+(500 vars, 204 obs)
+
+. destring *, replace
+condition already numeric; no replace
+fakesm already numeric; no replace
+realsm already numeric; no replace
+fakesm_c already numeric; no replace
+realsm_c already numeric; no replace
+fakesm_l already numeric; no replace
+realsm_l already numeric; no replace
+fakesm_pc has all characters numeric; replaced as double
+(2 missing values generated)
+fakesm_npc has all characters numeric; replaced as double
+(2 missing values generated)
+realsm_pc has all characters numeric; replaced as double
+(2 missing values generated)
+realsm_npc has all characters numeric; replaced as double
+(2 missing values generated)
+clintontrump has all characters numeric; replaced as byte
+(2 missing values generated)
+crt_acc already numeric; no replace
+crt_rand already numeric; no replace
+crt_thomson already numeric; no replace
+v1 contains nonnumeric characters; no replace
+v2 contains nonnumeric characters; no replace
+v3 contains nonnumeric characters; no replace
+v4 has all characters numeric; replaced as byte
+(204 missing values generated)
+v5 has all characters numeric; replaced as byte
+(204 missing values generated)
+v6 contains nonnumeric characters; no replace
+v7 already numeric; no replace
+v8 contains nonnumeric characters; no replace
+v9 contains nonnumeric characters; no replace
+v10 already numeric; no replace
+confirmcode already numeric; no replace
+workerid contains nonnumeric characters; no replace
+idinst already numeric; no replace
+fb already numeric; no replace
+term has all characters numeric; replaced as byte
+(204 missing values generated)
+inst_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake1_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake1_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake1_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake1_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake1_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake1_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake2_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake2_3 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake2_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake2_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake2_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake2_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake3_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake3_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake3_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake3_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake3_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake3_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake4_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake4_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake4_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake4_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake4_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake4_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake5_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake5_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake5_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake5_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake5_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake5_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake6_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake6_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake6_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake6_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake6_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake6_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake7_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake7_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake7_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake7_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake7_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake7_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake8_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake8_3 has all characters numeric; replaced as byte
+(104 missing values generated)
+fake8_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake8_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake8_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake8_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake9_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake9_3 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake9_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake9_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake9_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake9_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake10_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake10_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake10_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake10_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake10_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake10_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake11_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake11_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake11_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake11_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake11_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake11_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake12_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake12_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake12_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+fake12_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+fake12_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+fake12_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real1_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real1_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real2_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real2_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real2_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real2_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real2_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real2_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real3_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real3_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real3_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real3_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real3_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real3_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real4_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real4_3 has all characters numeric; replaced as byte
+(103 missing values generated)
+real4_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real4_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real4_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real4_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real5_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real5_3 has all characters numeric; replaced as byte
+(103 missing values generated)
+real5_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real5_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real5_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real5_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real6_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real6_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real6_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real6_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real6_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real6_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real7_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real7_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real7_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real7_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real7_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real7_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real8_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real8_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real8_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real8_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real8_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real8_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real9_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real9_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real9_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real9_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real9_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real9_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real10_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real10_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real10_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real10_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real10_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real10_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real11_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real11_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real11_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real11_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real11_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real11_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real12_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real12_3 has all characters numeric; replaced as byte
+(102 missing values generated)
+real12_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real12_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real12_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real12_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+inst_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake1_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake1_2 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake1_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake1_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake1_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake1_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake1_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake2_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake2_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake2_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake2_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake2_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake2_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake2_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake3_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake3_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake3_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake3_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake3_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake3_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake3_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake4_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake4_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake4_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake4_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake4_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake4_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake4_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake5_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake5_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake5_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake5_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake5_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake5_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake5_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake6_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake6_2 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake6_30 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake6_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake6_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake6_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake6_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake7_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake7_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake7_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake7_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake7_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake7_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake7_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake8_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake8_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake8_30 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake8_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake8_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake8_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake8_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake9_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake9_2 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake9_30 has all characters numeric; replaced as byte
+(103 missing values generated)
+fake9_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake9_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake9_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake9_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake10_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake10_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake10_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake10_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake10_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake10_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake10_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake11_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake11_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake11_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake11_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake11_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake11_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake11_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake12_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+fake12_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake12_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+fake12_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+fake12_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+fake12_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+fake12_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real1_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real1_2 has all characters numeric; replaced as byte
+(103 missing values generated)
+real1_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real1_rt_1 has all characters numeric; replaced as double
+(102 missing values generated)
+real1_rt_2 has all characters numeric; replaced as double
+(102 missing values generated)
+real1_rt_3 has all characters numeric; replaced as double
+(102 missing values generated)
+real1_rt_4 has all characters numeric; replaced as byte
+(102 missing values generated)
+real2_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real2_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real2_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real2_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real2_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real2_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real2_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real3_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real3_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real3_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real3_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real3_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real3_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real3_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real4_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real4_2 has all characters numeric; replaced as byte
+(103 missing values generated)
+real4_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real4_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real4_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real4_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real4_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real5_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real5_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real5_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real5_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real5_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real5_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real5_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real6_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real6_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real6_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real6_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real6_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real6_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real6_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real7_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real7_2 has all characters numeric; replaced as byte
+(103 missing values generated)
+real7_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real7_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real7_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real7_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real7_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real8_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real8_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real8_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real8_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real8_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real8_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real8_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real9_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real9_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real9_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real9_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real9_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real9_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real9_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real10_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real10_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real10_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real10_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real10_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real10_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real10_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real11_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real11_2 has all characters numeric; replaced as byte
+(102 missing values generated)
+real11_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real11_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real11_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real11_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real11_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+real12_a_sm has all characters numeric; replaced as byte
+(102 missing values generated)
+real12_2 has all characters numeric; replaced as byte
+(103 missing values generated)
+real12_30 has all characters numeric; replaced as byte
+(102 missing values generated)
+real12_rt_10 has all characters numeric; replaced as double
+(102 missing values generated)
+real12_rt_20 has all characters numeric; replaced as double
+(102 missing values generated)
+real12_rt_30 has all characters numeric; replaced as double
+(102 missing values generated)
+real12_rt_40 has all characters numeric; replaced as byte
+(102 missing values generated)
+crt_inst already numeric; no replace
+crt1_1 already numeric; no replace
+crt1_1_rt_1 already numeric; no replace
+crt1_1_rt_2 already numeric; no replace
+crt1_1_rt_3 already numeric; no replace
+crt1_1_rt_4 already numeric; no replace
+crt1_2 already numeric; no replace
+crt1_2_rt_1 already numeric; no replace
+crt1_2_rt_2 already numeric; no replace
+crt1_2_rt_3 already numeric; no replace
+crt1_2_rt_4 already numeric; no replace
+crt1_3 already numeric; no replace
+crt1_3_rt_1 already numeric; no replace
+crt1_3_rt_2 already numeric; no replace
+crt1_3_rt_3 already numeric; no replace
+crt1_3_rt_4 already numeric; no replace
+crt3_1 has all characters numeric; replaced as byte
+(1 missing value generated)
+crt3_2 has all characters numeric; replaced as byte
+(2 missing values generated)
+crt3_3 already numeric; no replace
+crt3_4 already numeric; no replace
+crt_chk already numeric; no replace
+age already numeric; no replace
+sex has all characters numeric; replaced as byte
+(1 missing value generated)
+education already numeric; no replace
+english has all characters numeric; replaced as byte
+(2 missing values generated)
+party already numeric; no replace
+party_text contains nonnumeric characters; no replace
+social_conserv has all characters numeric; replaced as byte
+(3 missing values generated)
+economic_conserv has all characters numeric; replaced as byte
+(3 missing values generated)
+potus2016 has all characters numeric; replaced as byte
+(1 missing value generated)
+media1 has all characters numeric; replaced as byte
+(1 missing value generated)
+media2 has all characters numeric; replaced as byte
+(3 missing values generated)
+media3_1 already numeric; no replace
+media3_2 already numeric; no replace
+media3_3 has all characters numeric; replaced as byte
+(1 missing value generated)
+media3_11 already numeric; no replace
+fb_f already numeric; no replace
+random already numeric; no replace
+google already numeric; no replace
+socialmedia_chk already numeric; no replace
+zipcode already numeric; no replace
+comments contains nonnumeric characters; no replace
+length contains nonnumeric characters; no replace
+do_br_fl_158 contains nonnumeric characters; no replace
+do_br_fl_167 contains nonnumeric characters; no replace
+do_br_fl_679 contains nonnumeric characters; no replace
+do_bl_crt_thompson contains nonnumeric characters; no replace
+do_q_media2 contains nonnumeric characters; no replace
+do_q_media1 contains nonnumeric characters; no replace
+locationlatitude already numeric; no replace
+locationlongitude already numeric; no replace
+locationaccuracy already numeric; no replace
+crt_acc_1 already numeric; no replace
+crt_acc_2 already numeric; no replace
+crt_acc_3 already numeric; no replace
+crt_acc_4 has all characters numeric; replaced as byte
+(1 missing value generated)
+crt_acc_5 has all characters numeric; replaced as byte
+(2 missing values generated)
+crt_acc_6 already numeric; no replace
+crt_acc_7 already numeric; no replace
+crt_split already numeric; no replace
+politicfake1 already numeric; no replace
+politicfake2 already numeric; no replace
+politicfake3 already numeric; no replace
+politicfake4 already numeric; no replace
+politicfake5 already numeric; no replace
+politicfake6 already numeric; no replace
+politicfake7 already numeric; no replace
+politicfake8 already numeric; no replace
+politicfake9 already numeric; no replace
+politicfake10 already numeric; no replace
+politicfake11 already numeric; no replace
+politicfake12 already numeric; no replace
+politicreal1 already numeric; no replace
+politicreal2 already numeric; no replace
+politicreal3 already numeric; no replace
+politicreal4 already numeric; no replace
+politicreal5 already numeric; no replace
+politicreal6 already numeric; no replace
+politicreal7 already numeric; no replace
+politicreal8 already numeric; no replace
+politicreal9 already numeric; no replace
+politicreal10 already numeric; no replace
+politicreal11 already numeric; no replace
+politicreal12 already numeric; no replace
+likelihoodfake1 already numeric; no replace
+likelihoodfake2 already numeric; no replace
+likelihoodfake3 already numeric; no replace
+likelihoodfake4 already numeric; no replace
+likelihoodfake5 already numeric; no replace
+likelihoodfake6 already numeric; no replace
+likelihoodfake7 already numeric; no replace
+likelihoodfake8 already numeric; no replace
+likelihoodfake9 already numeric; no replace
+likelihoodfake10 already numeric; no replace
+likelihoodfake11 already numeric; no replace
+likelihoodfake12 already numeric; no replace
+likelihoodreal1 already numeric; no replace
+likelihoodreal2 already numeric; no replace
+likelihoodreal3 already numeric; no replace
+likelihoodreal4 already numeric; no replace
+likelihoodreal5 already numeric; no replace
+likelihoodreal6 already numeric; no replace
+likelihoodreal7 already numeric; no replace
+likelihoodreal8 already numeric; no replace
+likelihoodreal9 already numeric; no replace
+likelihoodreal10 already numeric; no replace
+likelihoodreal11 already numeric; no replace
+likelihoodreal12 already numeric; no replace
+familiarfake1 already numeric; no replace
+familiarfake2 already numeric; no replace
+familiarfake3 already numeric; no replace
+familiarfake4 already numeric; no replace
+familiarfake5 already numeric; no replace
+familiarfake6 already numeric; no replace
+familiarfake7 already numeric; no replace
+familiarfake8 already numeric; no replace
+familiarfake9 already numeric; no replace
+familiarfake10 already numeric; no replace
+familiarfake11 already numeric; no replace
+familiarfake12 already numeric; no replace
+familiarreal1 already numeric; no replace
+familiarreal2 already numeric; no replace
+familiarreal3 already numeric; no replace
+familiarreal4 already numeric; no replace
+familiarreal5 already numeric; no replace
+familiarreal6 already numeric; no replace
+familiarreal7 already numeric; no replace
+familiarreal8 already numeric; no replace
+familiarreal9 already numeric; no replace
+familiarreal10 already numeric; no replace
+familiarreal11 already numeric; no replace
+familiarreal12 already numeric; no replace
+familiarbinfake1 already numeric; no replace
+familiarbinfake2 already numeric; no replace
+familiarbinfake3 already numeric; no replace
+familiarbinfake4 already numeric; no replace
+familiarbinfake5 already numeric; no replace
+familiarbinfake6 already numeric; no replace
+familiarbinfake7 already numeric; no replace
+familiarbinfake8 already numeric; no replace
+familiarbinfake9 already numeric; no replace
+familiarbinfake10 already numeric; no replace
+familiarbinfake11 already numeric; no replace
+familiarbinfake12 already numeric; no replace
+familiarbinreal1 already numeric; no replace
+familiarbinreal2 already numeric; no replace
+familiarbinreal3 already numeric; no replace
+familiarbinreal4 already numeric; no replace
+familiarbinreal5 already numeric; no replace
+familiarbinreal6 already numeric; no replace
+familiarbinreal7 already numeric; no replace
+familiarbinreal8 already numeric; no replace
+familiarbinreal9 already numeric; no replace
+familiarbinreal10 already numeric; no replace
+familiarbinreal11 already numeric; no replace
+familiarbinreal12 already numeric; no replace
+
+. gen batch=1
+
+. append using tmp
+(note: variable fakesm was float, now double to accommodate using data's values)
+(note: variable realsm was float, now double to accommodate using data's values)
+(note: variable fakesm_c was float, now double to accommodate using data's values)
+(note: variable realsm_c was float, now double to accommodate using data's values)
+(note: variable fakesm_l was float, now double to accommodate using data's values)
+(note: variable realsm_l was float, now double to accommodate using data's values)
+(note: variable workerid was str17, now str21 to accommodate using data's values)
+(note: variable crt1_3 was byte, now float to accommodate using data's values)
+(note: variable crt3_4 was byte, now int to accommodate using data's values)
+(note: variable party_text was str13, now str33 to accommodate using data's values)
+(note: variable comments was str160, now str1306 to accommodate using data's values)
+(note: variable length was str55, now str193 to accommodate using data's values)
+
+. 
+. 
+. gen id=_n
+
+. gen didnt_finish=socialmedia_chk==.
+
+. 
+. ///////////////
+> // DESCRIPTIVES
+. sum id
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |        710       355.5    205.1036          1        710
+
+. table didnt_finish fb 
+
+----------------
+didnt_fin |  FB 
+ish       |    1
+----------+-----
+        0 |  709
+----------------
+
+. drop if didnt_finish==1 | fb==2
+(0 observations deleted)
+
+. sum id age 
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |        710       355.5    205.1036          1        710
+         age |        710    33.99437    10.71571         18         77
+
+. table sex
+
+----------------------
+      Sex |      Freq.
+----------+-----------
+        1 |        330
+        2 |        376
+----------------------
+
+. sum id if sex==.
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |          4      450.25    229.3285        107        585
+
+. 
+. table socialmedia_chk 
+
+----------------------
+SocialMed |
+ia_Chk    |      Freq.
+----------+-----------
+        1 |        397
+        2 |        312
+        3 |          1
+----------------------
+
+. sum id age if socialmedia_chk ==1
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |        397     369.063    201.5688          3        710
+         age |        397     35.1738    10.93588         18         77
+
+. table sex if socialmedia_chk ==1
+
+----------------------
+      Sex |      Freq.
+----------+-----------
+        1 |        180
+        2 |        213
+----------------------
+
+. sum id if sex==. & socialmedia_chk ==1
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |          4      450.25    229.3285        107        585
+
+. /////////////////
+
+end of do-file
+
+. do "/var/folders/42/0shmvk2961vc3kyvy9tp02qw0000gn/T//SD84311.000000"
+
+. // no treatment effect on socialmedia_chk (item indicating whether they ever share political
+>  news)
+. tabulate socialmedia_chk condition , chi2
+
+SocialMedi |       Condition
+     a_Chk |         1          2 |     Total
+-----------+----------------------+----------
+         1 |       200        196 |       396 
+         2 |       154        158 |       312 
+         3 |         1          0 |         1 
+-----------+----------------------+----------
+     Total |       355        354 |       709 
+
+          Pearson chi2(2) =   1.0903   Pr = 0.580
+
+. 
+. // no treatment effect on importance of accuracy q
+. ttest accimp, by(condition)
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+       1 |     252    4.170635    .0732802    1.163288    4.026312    4.314957
+       2 |     252    4.083333    .0778402    1.235675     3.93003    4.236637
+---------+--------------------------------------------------------------------
+combined |     504    4.126984    .0534358     1.19963    4.021999    4.231969
+---------+--------------------------------------------------------------------
+    diff |            .0873016    .1069069               -.1227385    .2973417
+------------------------------------------------------------------------------
+    diff = mean(1) - mean(2)                                      t =   0.8166
+Ho: diff = 0                                     degrees of freedom =      502
+
+    Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = 0.7927         Pr(|T| > |t|) = 0.4145          Pr(T > t) = 0.2073
+
+. ttest accimp if socialmedia_chk==1, by(condition)
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+       1 |     148    4.385135    .0758137    .9223133     4.23531    4.534961
+       2 |     145    4.289655    .0835728     1.00635    4.124467    4.454843
+---------+--------------------------------------------------------------------
+combined |     293    4.337884    .0563377    .9643464    4.227004    4.448763
+---------+--------------------------------------------------------------------
+    diff |              .09548    .1127359               -.1264012    .3173611
+------------------------------------------------------------------------------
+    diff = mean(1) - mean(2)                                      t =   0.8469
+Ho: diff = 0                                     degrees of freedom =      291
+
+    Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = 0.8011         Pr(|T| > |t|) = 0.3977          Pr(T > t) = 0.1989
+
+. 
+. 
+. //////////////////
+> // Reshape long
+. drop *rt*
+
+. drop *_sm
+
+. rename fake*_2 fake_acc*
+
+. rename real*_2 real_acc*
+
+. rename fake*_3 fake_sm*
+
+. rename real*_3 real_sm*
+
+. rename fake*_30 fakeC_sm*
+
+. rename real*_30 realC_sm*
+
+. reshape long fake_acc real_acc fake_sm real_sm  fakeC_sm realC_sm , i(id) j(item_num)
+(note: j = 1 2 3 4 5 6 7 8 9 10 11 12)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                      710   ->    8520
+Number of variables                 242   ->     177
+j variable (12 values)                    ->   item_num
+xij variables:
+     fake_acc1 fake_acc2 ... fake_acc12   ->   fake_acc
+     real_acc1 real_acc2 ... real_acc12   ->   real_acc
+        fake_sm1 fake_sm2 ... fake_sm12   ->   fake_sm
+        real_sm1 real_sm2 ... real_sm12   ->   real_sm
+     fakeC_sm1 fakeC_sm2 ... fakeC_sm12   ->   fakeC_sm
+     realC_sm1 realC_sm2 ... realC_sm12   ->   realC_sm
+-----------------------------------------------------------------------------
+
+. replace fake_sm = fakeC_sm if fake_sm==.
+(4,242 real changes made)
+
+. replace real_sm = realC_sm if real_sm==.
+(4,242 real changes made)
+
+. rename fake_sm sm1
+
+. rename real_sm sm2
+
+. rename fake_acc acc1
+
+. rename real_acc acc2
+
+. gen uniqueI = id*1000+item_num
+
+. reshape long sm acc , i(unique) j(real)
+(note: j = 1 2)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                     8520   ->   17040
+Number of variables                 178   ->     177
+j variable (2 values)                     ->   real
+xij variables:
+                                sm1 sm2   ->   sm
+                              acc1 acc2   ->   acc
+-----------------------------------------------------------------------------
+
+. 
+. replace real=real-1
+(17,040 real changes made)
+
+. replace item_num=item_num+real*12
+(8,520 real changes made)
+
+. replace condition=condition-1
+(17,016 real changes made)
+
+. 
+. drop if sm==.
+(50 observations deleted)
+
+. replace sm=(sm-1)/5
+variable sm was byte now float
+(16,990 real changes made)
+
+. // make binary versions of sharing and accuracy rating
+. gen smB=sm>0.5
+
+. gen accB=acc>2
+
+. replace accB=. if acc==.
+(8,516 real changes made, 8,516 to missing)
+
+. 
+. 
+. label define bla1x 0 "Control" 1 "Treatment"
+
+. label values condition bla1x
+
+. 
+. label define bla2x 0 "Fake" 1 "Real"
+
+. label values real bla2x
+
+. 
+. label define bla4x 1 "Clinton" 2 "Trump"
+
+. label values clintontr bla4x
+
+. 
+. 
+. 
+. 
+. //////////////////
+> // Pre-registered analysis (not reported in paper for brevity, but results are consistent wi
+> th Studies 3-5)
+. gen conditionXreal =condition*real 
+
+. xi: cluster2 sm condition real conditionXreal if socialmedia_chk ==1 , tcluster(id) fcluster
+> (item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =    9490
+                                                       F(  3,  9486) =  156.48
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    24                  R-squared     =  0.0418
+Number of clusters (id) =       396                    Root MSE      =  0.3180
+--------------------------------------------------------------------------------
+            sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+---------------+----------------------------------------------------------------
+     condition |  -.1296711   .0244098    -5.31   0.000    -.1775196   -.0818226
+          real |    .052652   .0233924     2.25   0.024     .0067979    .0985061
+conditionXreal |   .0620231   .0203574     3.05   0.002     .0221182    .1019281
+         _cons |    .301586   .0199342    15.13   0.000     .2625107    .3406613
+--------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. xi: cluster2 sm condition real conditionXreal , tcluster(id) fcluster(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   16990
+                                                       F(  3, 16986) =  187.05
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    24                  R-squared     =  0.0284
+Number of clusters (id) =       709                    Root MSE      =  0.2954
+--------------------------------------------------------------------------------
+            sm |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+---------------+----------------------------------------------------------------
+     condition |  -.1005299   .0177041    -5.68   0.000    -.1352317    -.065828
+          real |   .0375481   .0169613     2.21   0.027     .0043021    .0707941
+conditionXreal |   .0409998    .013806     2.97   0.003     .0139385    .0680611
+         _cons |   .2352305   .0152038    15.47   0.000     .2054295    .2650315
+--------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. 
+. 
+. 
+. ////////////////////
+> // For Figure 3c
+. //    sharing in control:
+. tabulate smB real if socialmedia_chk ==1 & condition==0
+
+           |         real
+       smB |      Fake       Real |     Total
+-----------+----------------------+----------
+         0 |     1,669      1,578 |     3,247 
+         1 |       727        817 |     1,544 
+-----------+----------------------+----------
+     Total |     2,396      2,395 |     4,791 
+
+
+. //    sharing in treatment by accuracy rating
+. table accB smB real if socialmedia_chk ==1 & condition==1
+
+----------------------------------------
+          |         real and smB        
+          | --- Fake ---    --- Real ---
+     accB |     0      1        0      1
+----------+-----------------------------
+        0 | 1,732    112      845     38
+        1 |   264    239      908    554
+----------------------------------------
+
+. 
+. //////////////////
+
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_6_Stat
+> a_Results.txt
+  log type:  text
+ closed on:  19 Apr 2026, 20:11:23
+----------------------------------------------------------------------------------------------

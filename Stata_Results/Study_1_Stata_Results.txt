@@ -1,0 +1,758 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_1_Stat
+> a_Results.txt
+  log type:  text
+ opened on:  19 Apr 2026, 20:15:58
+
+. do "/var/folders/42/0shmvk2961vc3kyvy9tp02qw0000gn/T//SD84839.000000"
+
+. clear *
+
+. cd "/Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project"
+/Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project
+
+. insheet using "Study_1_data.csv", clear
+(477 vars, 1,825 obs)
+
+. 
+. 
+. ///////////////
+> // SUMMARY STATS
+. sum id
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |      1,825         913    526.9764          1       1825
+
+. gen noFBTwitter=(socialmedia_1==. & socialmedia_2==.)
+
+. gen noshare=sharingtype_1==.
+
+. table didnt_finish noFBTwitter noshare
+
+----------------------------------------
+          |   noshare and noFBTwitter   
+didnt_fin | ----- 0 ----    ----- 1 ----
+ish       |     0      1        0      1
+----------+-----------------------------
+        0 | 1,005                       
+        1 |    16     42      651    111
+----------------------------------------
+
+. table noFBTwitter noshare
+
+------------------------
+noFBTwitt |   noshare   
+er        |     0      1
+----------+-------------
+        0 | 1,021    651
+        1 |    42    111
+------------------------
+
+. drop if didnt_finish==1 
+(820 observations deleted)
+
+. sum id
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |      1,005    901.5711    530.4068          2       1825
+
+. sum id age 
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+          id |      1,005    901.5711    530.4068          2       1825
+         age |      1,005    36.68159      11.703         18         76
+
+. table sex
+
+----------------------
+      sex |      Freq.
+----------+-----------
+        1 |        475
+        2 |        516
+        3 |          2
+        4 |          1
+        5 |          7
+        7 |          4
+----------------------
+
+. /////////////////
+> 
+. 
+. 
+. 
+. 
+. 
+. /////////////////////////////
+> // Extended data figure 1 - importance placed on accuracy
+. label define bla1x 0 "Accuracy" 1 "Sharing"
+
+. label values condition bla1x
+
+. histogram accimp, by(condition)
+
+. // does importance of only sharing accurate content differ by condition?
+. ttest accimp, by(condition)
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+Accuracy |     502    3.798805    .0557855    1.249894    3.689202    3.908407
+ Sharing |     503    3.654076    .0558566    1.252733    3.544334    3.763817
+---------+--------------------------------------------------------------------
+combined |   1,005    3.726368    .0395179    1.252786    3.648821    3.803915
+---------+--------------------------------------------------------------------
+    diff |            .1447292    .0789431               -.0101833    .2996418
+------------------------------------------------------------------------------
+    diff = mean(Accuracy) - mean(Sharing)                         t =   1.8333
+Ho: diff = 0                                     degrees of freedom =     1003
+
+    Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = 0.9665         Pr(|T| > |t|) = 0.0670          Pr(T > t) = 0.0335
+
+. //////////////////////////
+> 
+. 
+. ////////////////////////////
+> // Reshape data into long format
+. // get all the ratings for a given item into the same column
+. forval j = 1/9 {
+  2.  replace fake`j'=fake`j'1 if fake`j'1~=.
+  3.  replace fake`j'=fake`j'2 if fake`j'2~=.
+  4.  replace fake`j'=fake`j'0 if fake`j'0~=.
+  5.  drop fake`j'0 fake`j'1 fake`j'2
+  6.  
+.  replace real`j'=real`j'1 if real`j'1~=.
+  7.  replace real`j'=real`j'2 if real`j'2~=.
+  8.  replace real`j'=real`j'0 if real`j'0~=.
+  9.  drop real`j'0 real`j'1 real`j'2
+ 10.  }
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+
+.  
+.  rename v129 fake10
+
+.  rename v138 fake11
+
+.  rename v147 fake12
+
+.  rename v291 real10
+
+.  rename v300 real11
+
+.  rename v309 real12
+
+. 
+.  forval j = 10/18 {
+  2.  replace fake`j'=fake`j'1 if fake`j'1~=.
+  3.  replace fake`j'=fake`j'2 if fake`j'2~=.
+  4.  replace fake`j'=fake`j'0 if fake`j'0~=.
+  5.  drop fake`j'0 fake`j'1 fake`j'2
+  6.  
+.  replace real`j'=real`j'1 if real`j'1~=.
+  7.  replace real`j'=real`j'2 if real`j'2~=.
+  8.  replace real`j'=real`j'0 if real`j'0~=.
+  9.  drop real`j'0 real`j'1 real`j'2
+ 10.  }
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+(255 real changes made)
+(248 real changes made)
+(246 real changes made)
+
+.  
+. 
+. drop *_rt_*
+
+. 
+. reshape long fake real , i(id) j(item_num)
+(note: j = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                     1005   ->   18090
+Number of variables                 211   ->     178
+j variable (18 values)                    ->   item_num
+xij variables:
+                 fake1 fake2 ... fake18   ->   fake
+                 real1 real2 ... real18   ->   real
+-----------------------------------------------------------------------------
+
+. gen uniqueI = id*1000+item_num
+
+. 
+. rename fake rating1
+
+. rename real rating2
+
+. 
+. reshape long rating, i(unique) j(real)
+(note: j = 1 2)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                    18090   ->   36180
+Number of variables                 179   ->     179
+j variable (2 values)                     ->   real
+xij variables:
+                        rating1 rating2   ->   rating
+-----------------------------------------------------------------------------
+
+. 
+. gen politically_concordant = (item_num<=9 & demrep==2) | (item_num>9 & demrep==1)
+
+. gen rep_leaning=item_num<=9
+
+. replace real=real-1
+(36,180 real changes made)
+
+. replace item_num=item_num+(1-real)*18                           
+(18,090 real changes made)
+
+. 
+. label define bla2x 0 "False" 1 "True"
+
+. label values real bla2x
+
+. 
+. label define bla3 0 "Discordant" 1 "Concordant"
+
+. label values politically_concordant  bla3
+
+. ///////////////////
+> 
+. 
+. /////////////////
+> // Figure 1a,b
+. graph bar (mean) rating, over(real) over(politically_concordant) over(condition)
+
+. // for CIs
+. bysort condition real politically_conc: cluster2 rating, tcluster(id) fcluster(item_num)
+
+----------------------------------------------------------------------------------------------
+-> condition = Accuracy, real = False, politically_concordant = Discordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4536
+                                                       F(  0,  4535) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       502                    Root MSE      =  0.3310
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .1252205   .0169188     7.40   0.000     .0920513    .1583896
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> condition = Accuracy, real = False, politically_concordant = Concordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4500
+                                                       F(  0,  4499) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       500                    Root MSE      =  0.3866
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .1828889   .0226839     8.06   0.000     .1384173    .2273604
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> condition = Accuracy, real = True, politically_concordant = Discordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4536
+                                                       F(  0,  4535) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       502                    Root MSE      =  0.4799
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .6404321    .032527    19.69   0.000     .5766634    .7042008
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> condition = Accuracy, real = True, politically_concordant = Concordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4500
+                                                       F(  0,  4499) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       500                    Root MSE      =  0.4108
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .7851111   .0253915    30.92   0.000     .7353313     .834891
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> condition = Sharing, real = False, politically_concordant = Discordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4527
+                                                       F(  0,  4526) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       503                    Root MSE      =  0.4107
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .2147117   .0190568    11.27   0.000      .177351    .2520725
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> condition = Sharing, real = False, politically_concordant = Concordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4527
+                                                       F(  0,  4526) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       503                    Root MSE      =  0.4840
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .3744201   .0223539    16.75   0.000     .3305955    .4182448
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> condition = Sharing, real = True, politically_concordant = Discordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4527
+                                                       F(  0,  4526) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       503                    Root MSE      =  0.4275
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .2405567   .0243456     9.88   0.000     .1928274    .2882859
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+----------------------------------------------------------------------------------------------
+-> condition = Sharing, real = True, politically_concordant = Concordant
+ 
+Linear regression with 2D clustered SEs                Number of obs =    4527
+                                                       F(  0,  4526) =    0.00
+                                                       Prob > F      =       .
+Number of clusters (item_num) =    18                  R-squared     =  0.0000
+Number of clusters (id) =       503                    Root MSE      =  0.4989
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _cons |   .4665341   .0289376    16.12   0.000     .4098023     .523266
+------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. //////////////
+> 
+. 
+. /////////////////
+> // Main analysis - Table S1
+. // z-score rating
+. egen mean_rating=mean(rating), by(condition)
+
+. egen sd_rating=sd(rating), by(condition)
+
+. gen z_rating=(rating-mean_rating)/sd_rating
+
+. drop mean_rating sd_rating
+
+. // center variables
+. replace real=real-.5
+variable real was byte now float
+(36,180 real changes made)
+
+. replace politically_conc=politically_conc-.5
+(36,180 real changes made)
+
+. replace condition=condition-.5
+variable condition was byte now float
+(36,180 real changes made)
+
+. // generate interaction terms
+. gen conditionXreal=condition*real
+
+. gen conditionXconc=condition*politically_conc
+
+. gen realXconc=real*politically_conc
+
+. gen conditionXrealXconc=politically_conc*real*condition
+
+. 
+. 
+. // Main model
+. xi: cluster2 rating condition real politically_conc conditionXreal conditionXconc realXconc 
+> conditionXrealXconc , tcluster(id) fcluster(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   36180
+                                                       F(  7, 36172) = 1526.57
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    36                  R-squared     =  0.2069
+Number of clusters (id) =      1005                    Root MSE      =  0.4320
+----------------------------------------------------------------------------------------
+                rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+             condition |  -.1093575   .0181339    -6.03   0.000    -.1449004   -.0738145
+                  real |   .3088482   .0204396    15.11   0.000      .268786    .3489104
+politically_concordant |   .1470083   .0180481     8.15   0.000     .1116335    .1823831
+        conditionXreal |  -.4997375   .0309519   -16.15   0.000    -.5604041   -.4390708
+        conditionXconc |   .0916692   .0220795     4.15   0.000     .0483927    .1349458
+             realXconc |   .0766398   .0347544     2.21   0.027     .0085201    .1447596
+   conditionXrealXconc |  -.0207415   .0396203    -0.52   0.601    -.0983986    .0569155
+                 _cons |   .3787344   .0112595    33.64   0.000     .3566654    .4008034
+----------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. // effect of veracity is significant in acc condition
+. disp (_b[real]+_b[conditionXreal]*-.5)
+.55871693
+
+. test real+conditionXreal*-.5=0
+
+ ( 1)  real - .5*conditionXreal = 0
+
+       F(  1, 36172) =  375.05
+            Prob > F =    0.0000
+
+. // effect of concordance is sig in acc condition
+. disp (_b[politically_concordant ]+_b[conditionXconc]*-.5)
+.10117372
+
+. test politically_concordant +conditionXconc*-0.5=0
+
+ ( 1)  politically_concordant - .5*conditionXconc = 0
+
+       F(  1, 36172) =   26.45
+            Prob > F =    0.0000
+
+. // veracity has bigger effect than concordance in acc condition
+. test real+conditionXreal*-.5=politically_concordant +conditionXconc*-0.5
+
+ ( 1)  real - politically_concordant - .5*conditionXreal + .5*conditionXconc = 0
+
+       F(  1, 36172) =  137.26
+            Prob > F =    0.0000
+
+. // effect of veracity is significant in sharing condition
+. disp (_b[real]+_b[conditionXreal]*.5)
+.05897946
+
+. test real+conditionXreal*.5=0
+
+ ( 1)  real + .5*conditionXreal = 0
+
+       F(  1, 36172) =    7.21
+            Prob > F =    0.0072
+
+. // effect of concordance is sig in acc condition
+. disp (_b[politically_concordant ]+_b[conditionXconc]*.5)
+.19284294
+
+. test politically_concordant +conditionXconc*0.5=0
+
+ ( 1)  politically_concordant + .5*conditionXconc = 0
+
+       F(  1, 36172) =   73.18
+            Prob > F =    0.0000
+
+. // veracity has bigger effect than concordance in acc condition
+. test real+conditionXreal*.5=politically_concordant +conditionXconc*0.5
+
+ ( 1)  real - politically_concordant + .5*conditionXreal - .5*conditionXconc = 0
+
+       F(  1, 36172) =   19.73
+            Prob > F =    0.0000
+
+. // effect of veracity differs across conditions
+. test conditionXreal
+
+ ( 1)  conditionXreal = 0
+
+       F(  1, 36172) =  260.68
+            Prob > F =    0.0000
+
+. // effect of concordance differs across conditions
+. test conditionXconc
+
+ ( 1)  conditionXconc = 0
+
+       F(  1, 36172) =   17.24
+            Prob > F =    0.0000
+
+. 
+. 
+. // robustness check using logistic regression
+. xi: logit2 rating condition real politically_conc conditionXreal conditionXconc realXconc co
+> nditionXrealXconc, tcluster(id) fcluster(item_num)
+ 
+Logit with 2D clustered SEs
+                                                       Number of obs =   36180
+Number of clusters (item_num) =    36                  Wald chi2(  7) =6330.40
+Number of clusters (id) =      1005                    Prob > chi2   =  0.0000
+Log pseudolikelihood = -2.013e+04                      Pseudo R2     =  0.1613
+----------------------------------------------------------------------------------------
+                rating |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+rating                 |
+             condition |  -.3814752   .1020621    -3.74   0.000    -.5815133   -.1814371
+                  real |   1.460024   .1094539    13.34   0.000     1.245499     1.67455
+politically_concordant |    .741121   .0992087     7.47   0.000     .5466756    .9355665
+        conditionXreal |  -2.393688   .1811185   -13.22   0.000    -2.748673   -2.038702
+        conditionXconc |   .3167782   .1145597     2.77   0.006     .0922453    .5413111
+             realXconc |   .2517882   .1911245     1.32   0.188    -.1228089    .6263853
+   conditionXrealXconc |  -.0393523   .2028106    -0.19   0.846    -.4368538    .3581493
+                 _cons |  -.5826996   .0595732    -9.78   0.000     -.699461   -.4659383
+----------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. // robustness check using z-scored DV
+. xi: cluster2 z_rating condition real politically_conc conditionXreal conditionXconc realXcon
+> c conditionXrealXconc , tcluster(id) fcluster(item_num)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   36180
+                                                       F(  7, 36172) = 1504.89
+                                                       Prob > F      =  0.0000
+Number of clusters (item_num) =    36                  R-squared     =  0.1887
+Number of clusters (id) =      1005                    Root MSE      =  0.9008
+----------------------------------------------------------------------------------------
+              z_rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+             condition |  -.0004067   .0376752    -0.01   0.991    -.0742512    .0734378
+                  real |   .6267613   .0422147    14.85   0.000     .5440191    .7095034
+politically_concordant |   .3080997   .0375966     8.19   0.000     .2344092    .3817901
+        conditionXreal |  -1.001492   .0636688   -15.73   0.000    -1.126285    -.876699
+        conditionXconc |   .2078562   .0462398     4.50   0.000     .1172249    .2984875
+             realXconc |   .1585901   .0722994     2.19   0.028     .0168812     .300299
+   conditionXrealXconc |  -.0339996   .0827358    -0.41   0.681    -.1961643     .128165
+                 _cons |   .0002034   .0233884     0.01   0.993    -.0456387    .0460454
+----------------------------------------------------------------------------------------
+ 
+     SE clustered by item_num and id
+ 
+
+. //outreg2 using "C:\users\drand\desktop\bla3", append excel alpha(.001, .01, .05) stats(coef
+>  se pval)
+. outreg2 using "/Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/bla3.xls
+> x", append excel alpha(.001, .01, .05) stats(coef se pval)
+/Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/bla3.xlsx
+dir : seeout
+
+. 
+. 
+. 
+. // higher accimp people are more discerning in their sharing
+. xi: cluster2 rating i.real*accimp if condition==.5, fcluster(id) tcluster(item_num )
+i.real            _Ireal_1-2          (_Ireal_1 for real==-.5 omitted)
+i.real*accimp     _IreaXaccim_#       (coded as above)
+ 
+Linear regression with 2D clustered SEs                Number of obs =   18108
+                                                       F(  3, 18104) =   35.22
+                                                       Prob > F      =  0.0000
+Number of clusters (id) =       503                    R-squared     =  0.0055
+Number of clusters (item_num) =    36                  Root MSE      =  0.4668
+-------------------------------------------------------------------------------
+       rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+     _Ireal_2 |  -.0429914   .0368758    -1.17   0.244    -.1152715    .0292888
+       accimp |  -.0178709   .0095136    -1.88   0.060    -.0365185    .0007767
+_IreaXaccim_2 |   .0279061   .0086049     3.24   0.001     .0110396    .0447726
+        _cons |   .3598676   .0376098     9.57   0.000     .2861487    .4335864
+-------------------------------------------------------------------------------
+ 
+     SE clustered by id and item_num
+ 
+
+. test _IreaXaccim_2=0
+
+ ( 1)  _IreaXaccim_2 = 0
+
+       F(  1, 18104) =   10.52
+            Prob > F =    0.0012
+
+. test accimp+_IreaXaccim_2=0
+
+ ( 1)  accimp + _IreaXaccim_2 = 0
+
+       F(  1, 18104) =    1.31
+            Prob > F =    0.2531
+
+. xi: bysort real: cluster2 rating accimp if condition==.5, fcluster(id) tcluster(item_num )
+
+----------------------------------------------------------------------------------------------
+-> real = -.5
+ 
+Linear regression with 2D clustered SEs                Number of obs =    9054
+                                                       F(  1,  9052) =   23.79
+                                                       Prob > F      =  0.0000
+Number of clusters (id) =       503                    R-squared     =  0.0024
+Number of clusters (item_num) =    18                  Root MSE      =  0.4553
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      accimp |  -.0178709   .0095322    -1.87   0.061    -.0365563    .0008145
+       _cons |   .3598676   .0377201     9.54   0.000     .2859277    .4338074
+------------------------------------------------------------------------------
+ 
+     SE clustered by id and item_num
+ 
+
+----------------------------------------------------------------------------------------------
+-> real = .5
+ 
+Linear regression with 2D clustered SEs                Number of obs =    9054
+                                                       F(  1,  9052) =    6.85
+                                                       Prob > F      =  0.0089
+Number of clusters (id) =       503                    R-squared     =  0.0007
+Number of clusters (item_num) =    18                  Root MSE      =  0.4780
+------------------------------------------------------------------------------
+      rating |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      accimp |   .0100352   .0088104     1.14   0.255    -.0072353    .0273056
+       _cons |   .3168762   .0350476     9.04   0.000      .248175    .3855773
+------------------------------------------------------------------------------
+ 
+     SE clustered by id and item_num
+ 
+
+. 
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  /Users/hayleyshin/Desktop/Yale/2026_Spring/Social Algorithms/Project/Study_1_Stat
+> a_Results.txt
+  log type:  text
+ closed on:  19 Apr 2026, 20:16:18
+----------------------------------------------------------------------------------------------
