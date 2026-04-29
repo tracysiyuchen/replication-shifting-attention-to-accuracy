@@ -59,7 +59,7 @@ RAW CSV (1,825 rows × 477 cols)
 │                                                     │
 │  • Bar chart: mean rating by                        │
 │    veracity × concordance × condition               │
-│  • Clustered bootstrap CIs (cluster2)               │
+│  • Clustered analytic SEs for CIs (cluster2)        │
 │  OUTPUT: Fig. 1a (accuracy), Fig. 1b (sharing)      │
 └─────────────────────┬───────────────────────────────┘
                       │  same long-format data
@@ -371,16 +371,16 @@ All statistics and figures reported for Study 1 in the paper's main text, figure
 | F(1,36172)=375.05, P<0.0001 (veracity, acc.) | p. 590 | Y (line 121) | Same test |
 | Accuracy cond.: 10.1 pp concordance effect | p. 590 | Y (line 124) | Wald test concordance in acc. cond. |
 | F(1,36172)=26.45, P<0.0001 (concordance, acc.) | p. 590 | Y (line 124) | Same test |
-| Veracity × concordance interaction in acc. cond.: F(1,36172)=137.26 | p. 590 | Partial | No explicit test in .do; may be from regression output directly |
+| Veracity × concordance interaction in acc. cond.: F(1,36172)=137.26 | p. 590 | Y (line 126) | `test real+conditionXreal*-.5=politically_concordant+conditionXconc*-0.5` — confirmed in Stata log |
 | Veracity > concordance in accuracy condition | p. 590 | Y (line 126) | `test real+...=politically_concordant+...` |
 | Sharing cond.: 5.9 pp veracity effect | p. 590 | Y (line 129) | Wald test `test real+conditionXreal*.5=0` |
 | Sharing cond.: 19.3 pp concordance effect | p. 590 | Y (line 132) | Wald test concordance in sharing cond. |
 | Concordance > veracity in sharing condition | p. 590 | Y (line 134) | `test real+...=politically_concordant+...` |
 | Veracity × condition interaction: F(1,36172)=260.68, P<0.0001 | p. 590–591 | Y (line 136) | `test conditionXreal` |
 | Concordance × condition interaction: F(1,36172)=17.24, P<0.0001 | p. 591 | Y (line 138) | `test conditionXconc` |
-| False concordant 37.4% sharing | p. 591 | No | Computed from means, not explicit in .do |
-| True discordant 18.2% sharing | p. 591 | No | Computed from means, not explicit in .do |
-| F(1,36172)=19.73 (false concordant vs. true discordant) | p. 591 | No | Wald test not present in .do |
+| False concordant 37.4% sharing rate (sharing condition) | p. 591 | No | Computed from means, not explicit in .do; Stata log confirms 37.4% — exact match |
+| False concordant 18.2% accuracy rating (accuracy condition) | p. 591 | No | Paper cites these two values as a cross-condition dissociation; Stata log shows 18.3% — 0.1pp rounding match |
+| F(1,36172)=19.73 (false concordant vs. true discordant) | p. 591 | Y (line 134) | Same as "veracity > concordance in sharing" — signs flipped, mathematically identical test |
 | "Migrant Caravaners": 15.7% rated accurate (Republicans) | p. 591 | No | Item-level descriptive, not in .do |
 | "Migrant Caravaners": 51.1% would share (Republicans) | p. 591 | No | Item-level descriptive, not in .do |
 | Logistic regression robustness | Methods, p. 593 | Y (line 142) | `logit2` |
@@ -397,7 +397,7 @@ All statistics and figures reported for Study 1 in the paper's main text, figure
 
 **Code does:** Only `drop if didnt_finish==1` is explicit (line 12).
 
-**Resolution (confirmed by Python replication):** The `didnt_finish` variable in the CSV encodes **all three exclusion criteria** simultaneously. After applying `drop if didnt_finish==1`, the additional `socialmedia` and `sharingtype_1` filters remove **zero** additional rows. The Qualtrics survey flow set `didnt_finish=1` for anyone who: (a) declined the screener about FB/Twitter, (b) declined to share political content, or (c) abandoned the survey.
+**Resolution (confirmed by Python replication and Stata execution log):** The `didnt_finish` variable in the CSV encodes **all three exclusion criteria** simultaneously. The Stata log confirms `drop if didnt_finish==1` deleted exactly **820 observations** (1,825 → 1,005). After applying `drop if didnt_finish==1`, the additional `socialmedia` and `sharingtype_1` filters remove **zero** additional rows. The Qualtrics survey flow set `didnt_finish=1` for anyone who: (a) declined the screener about FB/Twitter, (b) declined to share political content, or (c) abandoned the survey.
 
 The `noFBTwitter` and `noshare` flags are diagnostic cross-checks created for tabulation purposes — they confirm the composition of the `didnt_finish` group but are not needed as additional filters.
 
@@ -440,14 +440,20 @@ tcluster(id) fcluster(item_num)
 ```
 This is likely a typo. The `cluster2` ado should treat the two cluster dimensions symmetrically, so results are identical regardless of which gets the `t`/`f` label.
 
-### Discrepancy 6 — Missing Statistics in Code
+### Discrepancy 6 — RETRACTED: No Cell-Mean Gap for Paper-Cited Percentages
 
-The following statistics appear in the paper but have no corresponding test in the .do file:
-- F(1,36172) = 137.26 (veracity × concordance interaction within accuracy condition)
-- F(1,36172) = 19.73 (false concordant vs. true discordant Wald test)
-- "Migrant Caravaners" item-level percentages (15.7% / 51.1%)
+**Earlier versions of this audit incorrectly identified a ~6pp gap. That claim was wrong and is retracted.**
 
-These were likely computed from regression output tables (not from separate `test` commands) or from simple descriptive statistics not recorded in the archived code.
+The paper cites 37.4% and 18.2% on p. 591 as a **cross-condition dissociation** — not two cells from the same condition:
+
+| Paper quote | Value | Condition | DV | Stata log | Gap |
+|---|---|---|---|---|---|
+| "...consider sharing false but politically concordant headlines (37.4%)..." | 37.4% | Sharing | Sharing rate | 37.4% (line 434) | 0pp — exact match |
+| "...as they were to rate such headlines as accurate (18.2%)" | 18.2% | Accuracy | Accuracy rating | 18.3% (line 366) | 0.1pp — rounding only |
+
+The earlier analysis compared the paper's 18.2% (accuracy rating, accuracy condition) against the Stata raw cell mean for true discordant sharing (24.1%) — two completely different cells. That comparison was incorrect.
+
+**Unverified:** The paper also cites 15.7% and 51.1% for the 'Migrant Caravan' headline among Republicans specifically. These are item-level values filtered to one party and one headline; the Stata `.do` file does not compute them explicitly.
 
 ### Discrepancy 7 — Non-Reproducible Output Path
 
@@ -471,7 +477,7 @@ This generates `rep_leaning = 1` for items 1–9. However, based on the concorda
 | Stage | n | Source |
 |-------|---|--------|
 | Started survey | 1,825 | Paper main text / raw CSV row count |
-| `drop if didnt_finish==1` (encodes all 3 criteria) | −820 | Code line 12; verified in Python replication |
+| `drop if didnt_finish==1` (encodes all 3 criteria) | −820 | Code line 12; confirmed by Stata log ("820 observations deleted") and Python replication |
 | After drop | **1,005** | Python replication (exact) |
 | Additional FB/Twitter filter | 0 | Already captured by `didnt_finish` |
 | Additional sharing-intent filter | 0 | Already captured by `didnt_finish` |
